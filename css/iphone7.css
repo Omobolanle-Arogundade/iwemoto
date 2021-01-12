@@ -1,0 +1,59 @@
+.phone {
+    margin: auto;
+    background-color: #E8E8E8;
+    height: 35.4em;
+    width: 17em;
+    border-radius: 3em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 3px #a2a2a2;
+}
+
+.phone:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.screen {
+    background-color: #fff;
+    margin-top: 10%;
+    height: 74.5%;
+    width: 88%;
+    display: flex;
+    align-self: center;
+}
+
+.buttonx {
+    border: solid 2px #a2a2a2;
+    height: 5%;
+    width: 10%;
+    border-radius: 70%;
+    z-index: 1;
+    margin-top: 6%;
+}
+
+.camera {
+    background-color: #a2a2a2;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    margin-right: 20%;
+}
+
+.speaker {
+    background-color: #343434;
+    height: 4px;
+    width: 50px;
+    border-radius: 5em;
+    z-index: 1;
+}
+
+.flexbox-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 15px;
+}
