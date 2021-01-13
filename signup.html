@@ -1,196 +1,228 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vehicle Registration Made Simple! - IweMoto.com</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/bulma.css" />
+    <link rel="stylesheet" href="css/topazdecimal.css" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vehicle Registration Made Simple! - IweMoto.com </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bulma.css">
-    <link rel="stylesheet" href="css/topazdecimal.css">
-</head>
-
-<body>
+  <body>
     <section class="">
-        <!-- Hero header: will stick at the top -->
-        <div class="hero-head">
-            <header class="nav has-shadow">
-                <div class="container">
-                    <div class="nav-left">
-                        <a href="index.html" class="nav-item">
-                            <img class="logor" src="images/logo2.png" alt="Logo">
-                        </a>
-                    </div>
-                    <span class="nav-toggle">
-                  <span></span>
-                    <span></span>
-
-                    </span>
-                    <div class="nav-right nav-menu">
-                        <a class="nav-item">
-                     Login
-                     </a>
-                        <span class="nav-item nav-button">
-                     <a class="button is-success is-outlined">
-                     <span class="icon">
-                     <i class="fa fa-user"></i>
-                     </span>
-                        <span>Sign up</span>
-                        </a>
-                        </span>
-                    </div>
-                </div>
-
-            </header>
-            <div class="page-title-bar">
-                <div class="container side-30">
-                    <div class="columns">
-                        <div class="column auto">
-                            <h2>Sign up</h2>
-                        </div>
-                    </div>
-                </div>
+      <!-- Hero header: will stick at the top -->
+      <div class="hero-head">
+        <header class="nav has-shadow">
+          <div class="container">
+            <div class="nav-left">
+              <a href="index.html" class="nav-item">
+                <img class="logor" src="images/logo2.png" alt="Logo" />
+              </a>
             </div>
-        </div>
-
-
-        <div class="container" style="margin-top:7%;">
-
-            <div class="columns is-centered" style="padding:10px;">
-                <div class="column is-4 vehicle-slate slate-box is-narrow">
-
-
-
-                    <div class="columns other-card">
-
-                        <div class="column auto is-centered side-b">
-                            <div class="centered-details" style="padding:5px;">
-                                <div>
-                                    <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI5NC44MTIgMjk0LjgxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjk0LjgxMiAyOTQuODEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxwYXRoIGQ9Ik0yNTEuNjU0LDQzLjE2NGMtNTcuNDc5LTU3LjQ4LTE1MS4wMDYtNTcuNDgtMjA4LjQ4NSwwQzIzLjAwMiw2My4zMzEsOS4yMDcsODguNjY3LDMuMjc0LDExNi40MzQgIGMtNS43NzYsMjcuMDM3LTMuODg0LDU1LjA0OSw1LjQ3MSw4MS4wMDZjMS4xMjQsMy4xMTcsNC41NjMsNC43MzMsNy42NzksMy42MWMzLjExOC0xLjEyNCw0LjczNC00LjU2MiwzLjYxLTcuNjc5ICBjLTguNTk1LTIzLjg0OS0xMC4zMzMtNDkuNTg2LTUuMDI1LTc0LjQzMWM1LjQ0Ny0yNS40OTYsMTguMTE5LTQ4Ljc2NiwzNi42NDUtNjcuMjkyYzUyLjgwMS01Mi44MDEsMTM4LjcxNC01Mi44MDEsMTkxLjUxNSwwICBjMjUuMTQ1LDI1LjE0NiwzOS4yMjEsNTguNTcxLDM5LjYzNCw5NC4xMmMwLjQxMywzNS40ODQtMTIuODExLDY5LjE3Ni0zNy4yMzQsOTQuODY4Yy0wLjI4OSwwLjMwNC0wLjU3NSwwLjYxLTAuODYxLDAuOTE2ICBjLTAuNTA2LDAuNTQxLTEuMDExLDEuMDgzLTEuNTM5LDEuNjExYy01Mi44MDEsNTIuODAxLTEzOC43MTQsNTIuODAxLTE5MS41MTUsMGMtMC4yODEtMC4yODEtMC41NTUtMC41NjctMC44MjYtMC44NTMgIGMtMC4wMTQtMC41NTQtMC4wMjYtMS4xLTAuMDI2LTEuNjM4YzAtMS4yMDgsMC4wMjMtMi40MTEsMC4wNjctMy42MWMwLjAxNS0wLjQwMSwwLjA0NS0wLjc5OCwwLjA2NS0xLjE5OCAgYzAuMDM5LTAuNzk3LDAuMDc2LTEuNTk0LDAuMTM0LTIuMzg3YzAuMDM1LTAuNDczLDAuMDg2LTAuOTQxLDAuMTI4LTEuNDEyYzAuMDYzLTAuNzE1LDAuMTIyLTEuNDMsMC4yLTIuMTQxICBjMC4wNTUtMC41MDIsMC4xMjctMSwwLjE5LTEuNWMwLjA4NS0wLjY3NSwwLjE2Ni0xLjM1MiwwLjI2Ni0yLjAyNGMwLjA3Ni0wLjUxMiwwLjE2Ni0xLjAxOSwwLjI1LTEuNTI4ICBjMC4xMDctMC42NTUsMC4yMTEtMS4zMSwwLjMzMi0xLjk2MWMwLjA5NS0wLjUxNSwwLjIwNC0xLjAyNSwwLjMwOC0xLjUzN2MwLjEyOS0wLjYzOSwwLjI1Ni0xLjI3OSwwLjM5OC0xLjkxNCAgYzAuMTE1LTAuNTE1LDAuMjQzLTEuMDI3LDAuMzY2LTEuNTM5YzAuMTUtMC42MjUsMC4yOTktMS4yNSwwLjQ2MS0xLjg3YzAuMTM1LTAuNTE0LDAuMjgxLTEuMDI0LDAuNDIzLTEuNTM1ICBjMC4xNzEtMC42MTIsMC4zNDEtMS4yMjUsMC41MjQtMS44MzNjMC4xNTMtMC41MSwwLjMxNy0xLjAxNiwwLjQ3OS0xLjUyMmMwLjE5Mi0wLjYwMSwwLjM4NC0xLjIwMywwLjU4Ny0xLjc5OSAgYzAuMTcyLTAuNTAzLDAuMzUyLTEuMDAzLDAuNTMyLTEuNTAzYzAuMjEzLTAuNTkyLDAuNDI3LTEuMTg0LDAuNjUxLTEuNzcyYzAuMTktMC40OTcsMC4zODctMC45ODksMC41ODUtMS40ODIgIGMwLjIzMy0wLjU4MSwwLjQ2OC0xLjE2MiwwLjcxMi0xLjczOGMwLjIwOC0wLjQ5LDAuNDIyLTAuOTc2LDAuNjM4LTEuNDYyYzAuMjUzLTAuNTcxLDAuNTA5LTEuMTQsMC43NzMtMS43MDUgIGMwLjIyNS0wLjQ4MSwwLjQ1NS0wLjk1OSwwLjY4OC0xLjQzNmMwLjI3NC0wLjU2MSwwLjU1MS0xLjEyMSwwLjgzNS0xLjY3NmMwLjI0MS0wLjQ3LDAuNDg2LTAuOTM4LDAuNzM1LTEuNDA0ICBjMC4yOTQtMC41NTIsMC41OTMtMS4xMDIsMC44OTgtMS42NDljMC4yNTctMC40NiwwLjUxNy0wLjkxOCwwLjc4MS0xLjM3M2MwLjMxNC0wLjU0MSwwLjYzMy0xLjA3OSwwLjk1OC0xLjYxNSAgYzAuMjczLTAuNDUsMC41NDktMC44OTgsMC44MjktMS4zNDRjMC4zMzQtMC41MywwLjY3My0xLjA1NywxLjAxNy0xLjU4YzAuMjg4LTAuNDM5LDAuNTc4LTAuODc2LDAuODczLTEuMzEgIGMwLjM1My0wLjUyLDAuNzE0LTEuMDM0LDEuMDc4LTEuNTQ3YzAuMzAzLTAuNDI3LDAuNjA2LTAuODUzLDAuOTE2LTEuMjc0YzAuMzczLTAuNTA4LDAuNzU0LTEuMDExLDEuMTM3LTEuNTExICBjMC4zMTctMC40MTQsMC42MzMtMC44MjgsMC45NTctMS4yMzdjMC4zOTMtMC40OTcsMC43OTUtMC45ODgsMS4xOTgtMS40NzdjMC4zMjktMC40LDAuNjU4LTAuOCwwLjk5NC0xLjE5NSAgYzAuNDE0LTAuNDg2LDAuODM3LTAuOTY1LDEuMjYxLTEuNDQzYzAuMzQyLTAuMzg2LDAuNjgyLTAuNzczLDEuMDMtMS4xNTNjMC40MzQtMC40NzQsMC44NzctMC45MzksMS4zMjEtMS40MDQgIGMwLjM1NC0wLjM3MiwwLjcwNi0wLjc0NSwxLjA2Ni0xLjExMmMwLjQ1NS0wLjQ2MiwwLjkyLTAuOTE0LDEuMzg0LTEuMzY4YzAuMzY0LTAuMzU1LDAuNzI1LTAuNzE0LDEuMDk1LTEuMDY0ICBjMC40NzgtMC40NTIsMC45NjctMC44OTMsMS40NTQtMS4zMzVjMC4zNzItMC4zMzcsMC43MzktMC42NzgsMS4xMTYtMS4wMWMwLjUwMy0wLjQ0MywxLjAxOS0wLjg3MywxLjUzMi0xLjMwNiAgYzAuMzc2LTAuMzE3LDAuNzQ4LTAuNjM5LDEuMTI5LTAuOTUxYzAuNTMxLTAuNDM0LDEuMDc1LTAuODU1LDEuNjE3LTEuMjc5YzAuMzc4LTAuMjk1LDAuNzUtMC41OTcsMS4xMzItMC44ODcgIGMwLjU3MS0wLjQzMywxLjE1NC0wLjg1MSwxLjczNi0xLjI3MWMwLjM2Ny0wLjI2NiwwLjcyNy0wLjUzOCwxLjA5OS0wLjc5OWMwLjY0Mi0wLjQ1MSwxLjI5OS0wLjg4NiwxLjk1NC0xLjMyMyAgYzAuMzIzLTAuMjE1LDAuNjM5LTAuNDM4LDAuOTY0LTAuNjVjMC44NTQtMC41NTUsMS43MjMtMS4wOTIsMi41OTgtMS42MjJjMC4xMzYtMC4wODIsMC4yNjgtMC4xNywwLjQwNS0wLjI1MiAgYzEuMDEyLTAuNjA2LDIuMDM4LTEuMTk0LDMuMDc2LTEuNzY2YzAuMzU1LTAuMTk1LDAuNzItMC4zNzgsMS4wNzktMC41NjljMC42ODktMC4zNjgsMS4zNzYtMC43MzksMi4wNzctMS4wOTEgIGMwLjQ0OS0wLjIyNiwwLjkwOS0wLjQzOCwxLjM2Mi0wLjY1N2MwLjU3Mi0wLjI3NywxLjE0Mi0wLjU1NywxLjcyMS0wLjgyNGMxMC44NzUsMTAuMzg4LDI1LjM4MiwxNi4yNjksNDAuNDQsMTYuMjY5ICBjMTUuMDU4LDAsMjkuNTY2LTUuODgyLDQwLjQ0MS0xNi4yNzFjMjEuMjI5LDkuODI1LDM4LjYwNCwyNy40NTQsNDguMDM3LDQ4Ljg5MmMxLjMzNCwzLjAzMiw0Ljg3Myw0LjQxMSw3LjkwOCwzLjA3NiAgYzMuMDMzLTEuMzM1LDQuNDEtNC44NzYsMy4wNzUtNy45MDhjLTEwLjMxOC0yMy40NS0yOC4yODEtNDIuMTg5LTUxLjAxOC01My41MDFjNi41OTctOS42NzcsMTAuMTY2LTIxLjEwNCwxMC4xNjYtMzIuODk2ICBjMC0zMi4zMTctMjYuMjkyLTU4LjYwOS01OC42MDktNTguNjA5Yy0zLjMxMywwLTYsMi42ODctNiw2czIuNjg3LDYsNiw2YzI1LjcwMSwwLDQ2LjYwOSwyMC45MDksNDYuNjA5LDQ2LjYwOSAgYzAsMTEuNDkyLTQuMjcxLDIyLjU1OC0xMi4wMjUsMzEuMTU3Yy0wLjAwMSwwLjAwMS0wLjAwMiwwLjAwMi0wLjAwMywwLjAwM2MtOC44NTQsOS44MTgtMjEuNDU4LDE1LjQ0OS0zNC41ODIsMTUuNDQ5ICBzLTI1LjcyOS01LjYzMS0zNC41ODItMTUuNDQ5Yy0wLjAwMS0wLjAwMi0wLjAwMy0wLjAwMy0wLjAwNS0wLjAwNGMtNy43NTMtOC42MDItMTIuMDIzLTE5LjY2NS0xMi4wMjMtMzEuMTU1ICBjMC0xMi41NDQsNC45MTEtMjQuMzEyLDEzLjgyOS0zMy4xMzRjMi4zNTYtMi4zMzEsMi4zNzYtNi4xMywwLjA0NS04LjQ4NWMtMi4zMy0yLjM1Ny02LjEyOS0yLjM3NS04LjQ4NS0wLjA0NiAgQzk0Ljk3OCw4MC4wMjMsODguODAyLDk0LjgyLDg4LjgwMiwxMTAuNTk0YzAsMTEuNzgsMy41NiwyMy4xOTksMTAuMTQ2LDMyLjg3MWMtMC4wNTksMC4wMjktMC4xMTYsMC4wNjEtMC4xNzQsMC4wOTEgIGMtMC40NjgsMC4yMzQtMC45MjUsMC40ODItMS4zODksMC43MjFjLTAuNzExLDAuMzY4LTEuNDI0LDAuNzM0LTIuMTI1LDEuMTE3Yy0wLjQ5NiwwLjI3LTAuOTgxLDAuNTU0LTEuNDcyLDAuODMxICBjLTAuNjU1LDAuMzcxLTEuMzExLDAuNzQtMS45NTcsMS4xMjNjLTAuNTAxLDAuMjk4LTAuOTk0LDAuNjA2LTEuNDksMC45MTFjLTAuNjIsMC4zODItMS4yNCwwLjc2My0xLjg1MSwxLjE1NiAgYy0wLjQ5OSwwLjMyMS0wLjk4OSwwLjY1MS0xLjQ4MiwwLjk3OWMtMC41OTMsMC4zOTUtMS4xODUsMC43OTItMS43NjksMS4xOThjLTAuNDkxLDAuMzQyLTAuOTc2LDAuNjkxLTEuNDYxLDEuMDQgIGMtMC41NywwLjQxMS0xLjEzOCwwLjgyNC0xLjY5OSwxLjI0NWMtMC40ODEsMC4zNjEtMC45NTYsMC43MjctMS40MywxLjA5NWMtMC41NSwwLjQyNy0xLjA5NiwwLjg1Ny0xLjYzNiwxLjI5NCAgYy0wLjQ2OCwwLjM3OC0wLjkzMiwwLjc2MS0xLjM5NCwxLjE0NmMtMC41MzEsMC40NDQtMS4wNTgsMC44OTMtMS41OCwxLjM0N2MtMC40NTMsMC4zOTMtMC45MDMsMC43ODktMS4zNDksMS4xOSAgYy0wLjUxNSwwLjQ2My0xLjAyMywwLjkzMS0xLjUyOCwxLjQwM2MtMC40MzYsMC40MDctMC44NzEsMC44MTUtMS4zMDEsMS4yM2MtMC40OTksMC40ODItMC45OSwwLjk3MS0xLjQ4LDEuNDYyICBjLTAuNDE4LDAuNDE5LTAuODM2LDAuODM3LTEuMjQ2LDEuMjYyYy0wLjQ4NSwwLjUwMy0wLjk2MSwxLjAxNS0xLjQzNiwxLjUyN2MtMC4zOTcsMC40MjgtMC43OTcsMC44NTQtMS4xODcsMS4yODkgIGMtMC40NzUsMC41MjgtMC45MzcsMS4wNjctMS40MDEsMS42MDRjLTAuMzczLDAuNDMyLTAuNzQ5LDAuODYtMS4xMTUsMS4yOTdjLTAuNDcxLDAuNTYzLTAuOTI3LDEuMTM3LTEuMzg2LDEuNzA5ICBjLTAuMzQxLDAuNDI2LTAuNjg5LDAuODQ2LTEuMDI0LDEuMjc3Yy0wLjQ4MiwwLjYyLTAuOTQ4LDEuMjUyLTEuNDE2LDEuODgyYy0wLjI5NCwwLjM5Ni0wLjU5NiwwLjc4NS0wLjg4NCwxLjE4NSAgYy0wLjU5MiwwLjgyLTEuMTY1LDEuNjUyLTEuNzMzLDIuNDg4Yy0wLjE0OSwwLjIyLTAuMzA3LDAuNDM0LTAuNDU1LDAuNjU1Yy0wLjcwNywxLjA1Ni0xLjM5NCwyLjEyNC0yLjA2MywzLjIwNCAgYy0wLjIzMSwwLjM3My0wLjQ0OCwwLjc1NC0wLjY3NCwxLjEyOWMtMC40MzMsMC43MTktMC44NjgsMS40MzctMS4yODUsMi4xNjZjLTAuMjYsMC40NTUtMC41MDYsMC45MTgtMC43NTksMS4zNzcgIGMtMC4zNjUsMC42Ni0wLjczMiwxLjMxOC0xLjA4MiwxLjk4NmMtMC4yNiwwLjQ5NS0wLjUwNiwwLjk5Ni0wLjc1OSwxLjQ5NWMtMC4zMjYsMC42NDQtMC42NTMsMS4yODctMC45NjYsMS45MzggIGMtMC4yNDksMC41MTgtMC40ODYsMS4wNDItMC43MjcsMS41NjNjLTAuMjk2LDAuNjQzLTAuNTkzLDEuMjg1LTAuODc3LDEuOTM0Yy0wLjIzNCwwLjUzNS0wLjQ1OCwxLjA3NS0wLjY4MywxLjYxNCAgYy0wLjI3MSwwLjY0Ny0wLjU0LDEuMjk0LTAuNzk4LDEuOTQ2Yy0wLjIxNywwLjU0OC0wLjQyNSwxLjA5OS0wLjYzMywxLjY1Yy0wLjI0NiwwLjY1NC0wLjQ4OSwxLjMwOS0wLjcyMywxLjk2OCAgYy0wLjE5OCwwLjU1OS0wLjM5LDEuMTIxLTAuNTgsMS42ODRjLTAuMjIzLDAuNjYxLTAuNDQsMS4zMjQtMC42NSwxLjk5MWMtMC4xNzksMC41NjctMC4zNTIsMS4xMzYtMC41MjIsMS43MDYgIGMtMC4yLDAuNjczLTAuMzkzLDEuMzQ4LTAuNTgsMi4wMjZjLTAuMTU4LDAuNTcyLTAuMzEzLDEuMTQ1LTAuNDYyLDEuNzIxYy0wLjE3NywwLjY4NS0wLjM0NSwxLjM3My0wLjUwOSwyLjA2MyAgYy0wLjEzNywwLjU3Ni0wLjI3MywxLjE1MS0wLjQsMS43MjljLTAuMTU0LDAuNjk5LTAuMjk3LDEuNDAyLTAuNDM3LDIuMTA2Yy0wLjExNSwwLjU3Ni0wLjIzMiwxLjE1Mi0wLjMzOCwxLjczMSAgYy0wLjEzMSwwLjcxOC0wLjI0OSwxLjQ0LTAuMzY2LDIuMTYzYy0wLjA5MiwwLjU3LTAuMTg5LDEuMTM5LTAuMjcyLDEuNzExYy0wLjEwOSwwLjc0Ni0wLjIwMSwxLjQ5Ni0wLjI5NSwyLjI0NiAgYy0wLjA2OSwwLjU1Ni0wLjE0NSwxLjExMS0wLjIwNiwxLjY2OWMtMC4wODYsMC43ODYtMC4xNTIsMS41NzctMC4yMjEsMi4zNjhjLTAuMDQ2LDAuNTI3LTAuMTAxLDEuMDUyLTAuMTM5LDEuNTgyICBjLTAuMDY0LDAuODgzLTAuMTA2LDEuNzctMC4xNDksMi42NThjLTAuMDIxLDAuNDQxLTAuMDU0LDAuODc5LTAuMDcsMS4zMjFjLTAuMDQ4LDEuMzMyLTAuMDc1LDIuNjY5LTAuMDc1LDQuMDExICBjMCwxLjQ0OSwwLjA0OSwyLjgxOSwwLjEwOCw0LjMzMmMwLjAxNCwwLjM1LDAuMDYzLDAuNjksMC4xMzMsMS4wMjJjMC4wMDYsMC4wMjYsMC4wMDksMC4wNTIsMC4wMTUsMC4wNzggIGMwLjA3NCwwLjMyNywwLjE3OCwwLjY0MSwwLjMwMywwLjk0NWMwLjAxMiwwLjAzLDAuMDIzLDAuMDYsMC4wMzYsMC4wOWMwLjEyOSwwLjMsMC4yODMsMC41ODYsMC40NTcsMC44NTggIGMwLjAyMiwwLjAzNCwwLjA0MywwLjA2OCwwLjA2NSwwLjEwMWMwLjE3OSwwLjI2NywwLjM3OCwwLjUxOCwwLjU5NSwwLjc1MmMwLjAxNiwwLjAxNywwLjAyNywwLjAzOCwwLjA0MywwLjA1NWwwLjc5MiwwLjg0MyAgYzAuNTk4LDAuNjQsMS4xOTYsMS4yNzgsMS44MiwxLjkwMWMyOC43NCwyOC43NCw2Ni40OTEsNDMuMTEsMTA0LjI0Myw0My4xMXM3NS41MDMtMTQuMzcsMTA0LjI0My00My4xMSAgYzAuNjI0LTAuNjIzLDEuMjIyLTEuMjYyLDEuODItMS45MDFsMC43OTItMC44NDNjMjYuNTg5LTI3Ljk3MSw0MC45ODUtNjQuNjQ3LDQwLjUzNi0xMDMuMjc1ICBDMjk0LjM1MiwxMDYuOTI4LDI3OS4wMjgsNzAuNTM4LDI1MS42NTQsNDMuMTY0eiIgZmlsbD0iIzkxREM1QSIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" /><br>
-                                    <p style="font-weight:300; font-size:1.2em; color:#666; margin-bottom:30px;">Sign up for free!</p>
-                                </div>
-
-                                <div class="field">
-                                    <p class="control has-icons-left has-icons-right">
-                                        <input class="input" type="text" placeholder="First name">
-                                        <span class="icon is-small is-left">
-                              <i class="fa fa-user"></i>
-                            </span>
-
-                                    </p>
-                                </div>
-                                <div class="field">
-                                    <p class="control has-icons-left has-icons-right">
-                                        <input class="input" type="text" placeholder="Surname">
-                                        <span class="icon is-small is-left">
-                              <i class="fa fa-user-o"></i>
-                            </span>
-
-                                    </p>
-                                </div>
-
-                                <div class="field">
-                                    <p class="control has-icons-left has-icons-right">
-                                        <input class="input" type="email" placeholder="Email">
-                                        <span class="icon is-small is-left">
-                              <i class="fa fa-envelope"></i>
-                            </span>
-                                        <span class="icon is-small is-right">
-                              <i class="fa fa-check"></i>
-                            </span>
-                                    </p>
-                                </div>
-                                <div class="field">
-                                    <p class="control has-icons-left">
-                                        <input class="input" type="tel" placeholder="Phone number">
-                                        <span class="icon is-small is-left">
-                              <i class="fa fa-mobile"></i>
-                            </span>
-                                    </p>
-                                </div>
-                                <div class="field">
-                                    <p class="control has-icons-left">
-                                        <input class="input" type="password" placeholder="Password">
-                                        <span class="icon is-small is-left">
-                              <i class="fa fa-lock"></i>
-                            </span>
-                                    </p>
-                                </div>
-                                <div class="field">
-                                    <p class="control has-icons-left">
-                                        <input class="input" type="password" placeholder="Retype password">
-                                        <span class="icon is-small is-left">
-                              <i class="fa fa-lock"></i>
-                            </span>
-                                    </p>
-                                </div>
-
-                                <div class="field">
-                                    <p class="control">
-                                        <button class="button is-success fill-button">
-                              Login
-                            </button>
-                                    </p>
-                                </div>
-                                <br>
-                                <a href="login.html"><span class="icon is-small"><i class="fa fa-user"></i></span>&nbsp;Already have an account? Log in!</a>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
+            <span class="nav-toggle">
+              <span></span>
+              <span></span>
+            </span>
+            <div class="nav-right nav-menu">
+              <a class="nav-item"> Login </a>
+              <span class="nav-item nav-button">
+                <a class="button is-success is-outlined">
+                  <span class="icon">
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <span>Sign up</span>
+                </a>
+              </span>
             </div>
-
-
-
-
-
+          </div>
+        </header>
+        <div class="page-title-bar">
+          <div class="container side-30">
+            <div class="columns">
+              <div class="column auto">
+                <h2>Sign up</h2>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <div class="container" style="margin-top: 7%">
+        <div class="columns is-centered" style="padding: 10px">
+          <div class="column is-4 vehicle-slate slate-box is-narrow">
+            <div class="columns other-card">
+              <div class="column auto is-centered side-b">
+                <div class="centered-details" style="padding: 5px">
+                  <div>
+                    <img
+                      src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI5NC44MTIgMjk0LjgxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjk0LjgxMiAyOTQuODEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxwYXRoIGQ9Ik0yNTEuNjU0LDQzLjE2NGMtNTcuNDc5LTU3LjQ4LTE1MS4wMDYtNTcuNDgtMjA4LjQ4NSwwQzIzLjAwMiw2My4zMzEsOS4yMDcsODguNjY3LDMuMjc0LDExNi40MzQgIGMtNS43NzYsMjcuMDM3LTMuODg0LDU1LjA0OSw1LjQ3MSw4MS4wMDZjMS4xMjQsMy4xMTcsNC41NjMsNC43MzMsNy42NzksMy42MWMzLjExOC0xLjEyNCw0LjczNC00LjU2MiwzLjYxLTcuNjc5ICBjLTguNTk1LTIzLjg0OS0xMC4zMzMtNDkuNTg2LTUuMDI1LTc0LjQzMWM1LjQ0Ny0yNS40OTYsMTguMTE5LTQ4Ljc2NiwzNi42NDUtNjcuMjkyYzUyLjgwMS01Mi44MDEsMTM4LjcxNC01Mi44MDEsMTkxLjUxNSwwICBjMjUuMTQ1LDI1LjE0NiwzOS4yMjEsNTguNTcxLDM5LjYzNCw5NC4xMmMwLjQxMywzNS40ODQtMTIuODExLDY5LjE3Ni0zNy4yMzQsOTQuODY4Yy0wLjI4OSwwLjMwNC0wLjU3NSwwLjYxLTAuODYxLDAuOTE2ICBjLTAuNTA2LDAuNTQxLTEuMDExLDEuMDgzLTEuNTM5LDEuNjExYy01Mi44MDEsNTIuODAxLTEzOC43MTQsNTIuODAxLTE5MS41MTUsMGMtMC4yODEtMC4yODEtMC41NTUtMC41NjctMC44MjYtMC44NTMgIGMtMC4wMTQtMC41NTQtMC4wMjYtMS4xLTAuMDI2LTEuNjM4YzAtMS4yMDgsMC4wMjMtMi40MTEsMC4wNjctMy42MWMwLjAxNS0wLjQwMSwwLjA0NS0wLjc5OCwwLjA2NS0xLjE5OCAgYzAuMDM5LTAuNzk3LDAuMDc2LTEuNTk0LDAuMTM0LTIuMzg3YzAuMDM1LTAuNDczLDAuMDg2LTAuOTQxLDAuMTI4LTEuNDEyYzAuMDYzLTAuNzE1LDAuMTIyLTEuNDMsMC4yLTIuMTQxICBjMC4wNTUtMC41MDIsMC4xMjctMSwwLjE5LTEuNWMwLjA4NS0wLjY3NSwwLjE2Ni0xLjM1MiwwLjI2Ni0yLjAyNGMwLjA3Ni0wLjUxMiwwLjE2Ni0xLjAxOSwwLjI1LTEuNTI4ICBjMC4xMDctMC42NTUsMC4yMTEtMS4zMSwwLjMzMi0xLjk2MWMwLjA5NS0wLjUxNSwwLjIwNC0xLjAyNSwwLjMwOC0xLjUzN2MwLjEyOS0wLjYzOSwwLjI1Ni0xLjI3OSwwLjM5OC0xLjkxNCAgYzAuMTE1LTAuNTE1LDAuMjQzLTEuMDI3LDAuMzY2LTEuNTM5YzAuMTUtMC42MjUsMC4yOTktMS4yNSwwLjQ2MS0xLjg3YzAuMTM1LTAuNTE0LDAuMjgxLTEuMDI0LDAuNDIzLTEuNTM1ICBjMC4xNzEtMC42MTIsMC4zNDEtMS4yMjUsMC41MjQtMS44MzNjMC4xNTMtMC41MSwwLjMxNy0xLjAxNiwwLjQ3OS0xLjUyMmMwLjE5Mi0wLjYwMSwwLjM4NC0xLjIwMywwLjU4Ny0xLjc5OSAgYzAuMTcyLTAuNTAzLDAuMzUyLTEuMDAzLDAuNTMyLTEuNTAzYzAuMjEzLTAuNTkyLDAuNDI3LTEuMTg0LDAuNjUxLTEuNzcyYzAuMTktMC40OTcsMC4zODctMC45ODksMC41ODUtMS40ODIgIGMwLjIzMy0wLjU4MSwwLjQ2OC0xLjE2MiwwLjcxMi0xLjczOGMwLjIwOC0wLjQ5LDAuNDIyLTAuOTc2LDAuNjM4LTEuNDYyYzAuMjUzLTAuNTcxLDAuNTA5LTEuMTQsMC43NzMtMS43MDUgIGMwLjIyNS0wLjQ4MSwwLjQ1NS0wLjk1OSwwLjY4OC0xLjQzNmMwLjI3NC0wLjU2MSwwLjU1MS0xLjEyMSwwLjgzNS0xLjY3NmMwLjI0MS0wLjQ3LDAuNDg2LTAuOTM4LDAuNzM1LTEuNDA0ICBjMC4yOTQtMC41NTIsMC41OTMtMS4xMDIsMC44OTgtMS42NDljMC4yNTctMC40NiwwLjUxNy0wLjkxOCwwLjc4MS0xLjM3M2MwLjMxNC0wLjU0MSwwLjYzMy0xLjA3OSwwLjk1OC0xLjYxNSAgYzAuMjczLTAuNDUsMC41NDktMC44OTgsMC44MjktMS4zNDRjMC4zMzQtMC41MywwLjY3My0xLjA1NywxLjAxNy0xLjU4YzAuMjg4LTAuNDM5LDAuNTc4LTAuODc2LDAuODczLTEuMzEgIGMwLjM1My0wLjUyLDAuNzE0LTEuMDM0LDEuMDc4LTEuNTQ3YzAuMzAzLTAuNDI3LDAuNjA2LTAuODUzLDAuOTE2LTEuMjc0YzAuMzczLTAuNTA4LDAuNzU0LTEuMDExLDEuMTM3LTEuNTExICBjMC4zMTctMC40MTQsMC42MzMtMC44MjgsMC45NTctMS4yMzdjMC4zOTMtMC40OTcsMC43OTUtMC45ODgsMS4xOTgtMS40NzdjMC4zMjktMC40LDAuNjU4LTAuOCwwLjk5NC0xLjE5NSAgYzAuNDE0LTAuNDg2LDAuODM3LTAuOTY1LDEuMjYxLTEuNDQzYzAuMzQyLTAuMzg2LDAuNjgyLTAuNzczLDEuMDMtMS4xNTNjMC40MzQtMC40NzQsMC44NzctMC45MzksMS4zMjEtMS40MDQgIGMwLjM1NC0wLjM3MiwwLjcwNi0wLjc0NSwxLjA2Ni0xLjExMmMwLjQ1NS0wLjQ2MiwwLjkyLTAuOTE0LDEuMzg0LTEuMzY4YzAuMzY0LTAuMzU1LDAuNzI1LTAuNzE0LDEuMDk1LTEuMDY0ICBjMC40NzgtMC40NTIsMC45NjctMC44OTMsMS40NTQtMS4zMzVjMC4zNzItMC4zMzcsMC43MzktMC42NzgsMS4xMTYtMS4wMWMwLjUwMy0wLjQ0MywxLjAxOS0wLjg3MywxLjUzMi0xLjMwNiAgYzAuMzc2LTAuMzE3LDAuNzQ4LTAuNjM5LDEuMTI5LTAuOTUxYzAuNTMxLTAuNDM0LDEuMDc1LTAuODU1LDEuNjE3LTEuMjc5YzAuMzc4LTAuMjk1LDAuNzUtMC41OTcsMS4xMzItMC44ODcgIGMwLjU3MS0wLjQzMywxLjE1NC0wLjg1MSwxLjczNi0xLjI3MWMwLjM2Ny0wLjI2NiwwLjcyNy0wLjUzOCwxLjA5OS0wLjc5OWMwLjY0Mi0wLjQ1MSwxLjI5OS0wLjg4NiwxLjk1NC0xLjMyMyAgYzAuMzIzLTAuMjE1LDAuNjM5LTAuNDM4LDAuOTY0LTAuNjVjMC44NTQtMC41NTUsMS43MjMtMS4wOTIsMi41OTgtMS42MjJjMC4xMzYtMC4wODIsMC4yNjgtMC4xNywwLjQwNS0wLjI1MiAgYzEuMDEyLTAuNjA2LDIuMDM4LTEuMTk0LDMuMDc2LTEuNzY2YzAuMzU1LTAuMTk1LDAuNzItMC4zNzgsMS4wNzktMC41NjljMC42ODktMC4zNjgsMS4zNzYtMC43MzksMi4wNzctMS4wOTEgIGMwLjQ0OS0wLjIyNiwwLjkwOS0wLjQzOCwxLjM2Mi0wLjY1N2MwLjU3Mi0wLjI3NywxLjE0Mi0wLjU1NywxLjcyMS0wLjgyNGMxMC44NzUsMTAuMzg4LDI1LjM4MiwxNi4yNjksNDAuNDQsMTYuMjY5ICBjMTUuMDU4LDAsMjkuNTY2LTUuODgyLDQwLjQ0MS0xNi4yNzFjMjEuMjI5LDkuODI1LDM4LjYwNCwyNy40NTQsNDguMDM3LDQ4Ljg5MmMxLjMzNCwzLjAzMiw0Ljg3Myw0LjQxMSw3LjkwOCwzLjA3NiAgYzMuMDMzLTEuMzM1LDQuNDEtNC44NzYsMy4wNzUtNy45MDhjLTEwLjMxOC0yMy40NS0yOC4yODEtNDIuMTg5LTUxLjAxOC01My41MDFjNi41OTctOS42NzcsMTAuMTY2LTIxLjEwNCwxMC4xNjYtMzIuODk2ICBjMC0zMi4zMTctMjYuMjkyLTU4LjYwOS01OC42MDktNTguNjA5Yy0zLjMxMywwLTYsMi42ODctNiw2czIuNjg3LDYsNiw2YzI1LjcwMSwwLDQ2LjYwOSwyMC45MDksNDYuNjA5LDQ2LjYwOSAgYzAsMTEuNDkyLTQuMjcxLDIyLjU1OC0xMi4wMjUsMzEuMTU3Yy0wLjAwMSwwLjAwMS0wLjAwMiwwLjAwMi0wLjAwMywwLjAwM2MtOC44NTQsOS44MTgtMjEuNDU4LDE1LjQ0OS0zNC41ODIsMTUuNDQ5ICBzLTI1LjcyOS01LjYzMS0zNC41ODItMTUuNDQ5Yy0wLjAwMS0wLjAwMi0wLjAwMy0wLjAwMy0wLjAwNS0wLjAwNGMtNy43NTMtOC42MDItMTIuMDIzLTE5LjY2NS0xMi4wMjMtMzEuMTU1ICBjMC0xMi41NDQsNC45MTEtMjQuMzEyLDEzLjgyOS0zMy4xMzRjMi4zNTYtMi4zMzEsMi4zNzYtNi4xMywwLjA0NS04LjQ4NWMtMi4zMy0yLjM1Ny02LjEyOS0yLjM3NS04LjQ4NS0wLjA0NiAgQzk0Ljk3OCw4MC4wMjMsODguODAyLDk0LjgyLDg4LjgwMiwxMTAuNTk0YzAsMTEuNzgsMy41NiwyMy4xOTksMTAuMTQ2LDMyLjg3MWMtMC4wNTksMC4wMjktMC4xMTYsMC4wNjEtMC4xNzQsMC4wOTEgIGMtMC40NjgsMC4yMzQtMC45MjUsMC40ODItMS4zODksMC43MjFjLTAuNzExLDAuMzY4LTEuNDI0LDAuNzM0LTIuMTI1LDEuMTE3Yy0wLjQ5NiwwLjI3LTAuOTgxLDAuNTU0LTEuNDcyLDAuODMxICBjLTAuNjU1LDAuMzcxLTEuMzExLDAuNzQtMS45NTcsMS4xMjNjLTAuNTAxLDAuMjk4LTAuOTk0LDAuNjA2LTEuNDksMC45MTFjLTAuNjIsMC4zODItMS4yNCwwLjc2My0xLjg1MSwxLjE1NiAgYy0wLjQ5OSwwLjMyMS0wLjk4OSwwLjY1MS0xLjQ4MiwwLjk3OWMtMC41OTMsMC4zOTUtMS4xODUsMC43OTItMS43NjksMS4xOThjLTAuNDkxLDAuMzQyLTAuOTc2LDAuNjkxLTEuNDYxLDEuMDQgIGMtMC41NywwLjQxMS0xLjEzOCwwLjgyNC0xLjY5OSwxLjI0NWMtMC40ODEsMC4zNjEtMC45NTYsMC43MjctMS40MywxLjA5NWMtMC41NSwwLjQyNy0xLjA5NiwwLjg1Ny0xLjYzNiwxLjI5NCAgYy0wLjQ2OCwwLjM3OC0wLjkzMiwwLjc2MS0xLjM5NCwxLjE0NmMtMC41MzEsMC40NDQtMS4wNTgsMC44OTMtMS41OCwxLjM0N2MtMC40NTMsMC4zOTMtMC45MDMsMC43ODktMS4zNDksMS4xOSAgYy0wLjUxNSwwLjQ2My0xLjAyMywwLjkzMS0xLjUyOCwxLjQwM2MtMC40MzYsMC40MDctMC44NzEsMC44MTUtMS4zMDEsMS4yM2MtMC40OTksMC40ODItMC45OSwwLjk3MS0xLjQ4LDEuNDYyICBjLTAuNDE4LDAuNDE5LTAuODM2LDAuODM3LTEuMjQ2LDEuMjYyYy0wLjQ4NSwwLjUwMy0wLjk2MSwxLjAxNS0xLjQzNiwxLjUyN2MtMC4zOTcsMC40MjgtMC43OTcsMC44NTQtMS4xODcsMS4yODkgIGMtMC40NzUsMC41MjgtMC45MzcsMS4wNjctMS40MDEsMS42MDRjLTAuMzczLDAuNDMyLTAuNzQ5LDAuODYtMS4xMTUsMS4yOTdjLTAuNDcxLDAuNTYzLTAuOTI3LDEuMTM3LTEuMzg2LDEuNzA5ICBjLTAuMzQxLDAuNDI2LTAuNjg5LDAuODQ2LTEuMDI0LDEuMjc3Yy0wLjQ4MiwwLjYyLTAuOTQ4LDEuMjUyLTEuNDE2LDEuODgyYy0wLjI5NCwwLjM5Ni0wLjU5NiwwLjc4NS0wLjg4NCwxLjE4NSAgYy0wLjU5MiwwLjgyLTEuMTY1LDEuNjUyLTEuNzMzLDIuNDg4Yy0wLjE0OSwwLjIyLTAuMzA3LDAuNDM0LTAuNDU1LDAuNjU1Yy0wLjcwNywxLjA1Ni0xLjM5NCwyLjEyNC0yLjA2MywzLjIwNCAgYy0wLjIzMSwwLjM3My0wLjQ0OCwwLjc1NC0wLjY3NCwxLjEyOWMtMC40MzMsMC43MTktMC44NjgsMS40MzctMS4yODUsMi4xNjZjLTAuMjYsMC40NTUtMC41MDYsMC45MTgtMC43NTksMS4zNzcgIGMtMC4zNjUsMC42Ni0wLjczMiwxLjMxOC0xLjA4MiwxLjk4NmMtMC4yNiwwLjQ5NS0wLjUwNiwwLjk5Ni0wLjc1OSwxLjQ5NWMtMC4zMjYsMC42NDQtMC42NTMsMS4yODctMC45NjYsMS45MzggIGMtMC4yNDksMC41MTgtMC40ODYsMS4wNDItMC43MjcsMS41NjNjLTAuMjk2LDAuNjQzLTAuNTkzLDEuMjg1LTAuODc3LDEuOTM0Yy0wLjIzNCwwLjUzNS0wLjQ1OCwxLjA3NS0wLjY4MywxLjYxNCAgYy0wLjI3MSwwLjY0Ny0wLjU0LDEuMjk0LTAuNzk4LDEuOTQ2Yy0wLjIxNywwLjU0OC0wLjQyNSwxLjA5OS0wLjYzMywxLjY1Yy0wLjI0NiwwLjY1NC0wLjQ4OSwxLjMwOS0wLjcyMywxLjk2OCAgYy0wLjE5OCwwLjU1OS0wLjM5LDEuMTIxLTAuNTgsMS42ODRjLTAuMjIzLDAuNjYxLTAuNDQsMS4zMjQtMC42NSwxLjk5MWMtMC4xNzksMC41NjctMC4zNTIsMS4xMzYtMC41MjIsMS43MDYgIGMtMC4yLDAuNjczLTAuMzkzLDEuMzQ4LTAuNTgsMi4wMjZjLTAuMTU4LDAuNTcyLTAuMzEzLDEuMTQ1LTAuNDYyLDEuNzIxYy0wLjE3NywwLjY4NS0wLjM0NSwxLjM3My0wLjUwOSwyLjA2MyAgYy0wLjEzNywwLjU3Ni0wLjI3MywxLjE1MS0wLjQsMS43MjljLTAuMTU0LDAuNjk5LTAuMjk3LDEuNDAyLTAuNDM3LDIuMTA2Yy0wLjExNSwwLjU3Ni0wLjIzMiwxLjE1Mi0wLjMzOCwxLjczMSAgYy0wLjEzMSwwLjcxOC0wLjI0OSwxLjQ0LTAuMzY2LDIuMTYzYy0wLjA5MiwwLjU3LTAuMTg5LDEuMTM5LTAuMjcyLDEuNzExYy0wLjEwOSwwLjc0Ni0wLjIwMSwxLjQ5Ni0wLjI5NSwyLjI0NiAgYy0wLjA2OSwwLjU1Ni0wLjE0NSwxLjExMS0wLjIwNiwxLjY2OWMtMC4wODYsMC43ODYtMC4xNTIsMS41NzctMC4yMjEsMi4zNjhjLTAuMDQ2LDAuNTI3LTAuMTAxLDEuMDUyLTAuMTM5LDEuNTgyICBjLTAuMDY0LDAuODgzLTAuMTA2LDEuNzctMC4xNDksMi42NThjLTAuMDIxLDAuNDQxLTAuMDU0LDAuODc5LTAuMDcsMS4zMjFjLTAuMDQ4LDEuMzMyLTAuMDc1LDIuNjY5LTAuMDc1LDQuMDExICBjMCwxLjQ0OSwwLjA0OSwyLjgxOSwwLjEwOCw0LjMzMmMwLjAxNCwwLjM1LDAuMDYzLDAuNjksMC4xMzMsMS4wMjJjMC4wMDYsMC4wMjYsMC4wMDksMC4wNTIsMC4wMTUsMC4wNzggIGMwLjA3NCwwLjMyNywwLjE3OCwwLjY0MSwwLjMwMywwLjk0NWMwLjAxMiwwLjAzLDAuMDIzLDAuMDYsMC4wMzYsMC4wOWMwLjEyOSwwLjMsMC4yODMsMC41ODYsMC40NTcsMC44NTggIGMwLjAyMiwwLjAzNCwwLjA0MywwLjA2OCwwLjA2NSwwLjEwMWMwLjE3OSwwLjI2NywwLjM3OCwwLjUxOCwwLjU5NSwwLjc1MmMwLjAxNiwwLjAxNywwLjAyNywwLjAzOCwwLjA0MywwLjA1NWwwLjc5MiwwLjg0MyAgYzAuNTk4LDAuNjQsMS4xOTYsMS4yNzgsMS44MiwxLjkwMWMyOC43NCwyOC43NCw2Ni40OTEsNDMuMTEsMTA0LjI0Myw0My4xMXM3NS41MDMtMTQuMzcsMTA0LjI0My00My4xMSAgYzAuNjI0LTAuNjIzLDEuMjIyLTEuMjYyLDEuODItMS45MDFsMC43OTItMC44NDNjMjYuNTg5LTI3Ljk3MSw0MC45ODUtNjQuNjQ3LDQwLjUzNi0xMDMuMjc1ICBDMjk0LjM1MiwxMDYuOTI4LDI3OS4wMjgsNzAuNTM4LDI1MS42NTQsNDMuMTY0eiIgZmlsbD0iIzkxREM1QSIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"
+                    /><br />
+                    <p
+                      style="
+                        font-weight: 300;
+                        font-size: 1.2em;
+                        color: #666;
+                        margin-bottom: 30px;
+                      "
+                    >
+                      Sign up for free!
+                    </p>
+                  </div>
+
+                  <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="First name"
+                      />
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-user"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                      <input class="input" type="text" placeholder="Surname" />
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-user-o"></i>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                      <input class="input" type="email" placeholder="Email" />
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fa fa-check"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-left">
+                      <input
+                        class="input"
+                        type="tel"
+                        placeholder="Phone number"
+                      />
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-mobile"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-left">
+                      <input
+                        class="input"
+                        type="password"
+                        placeholder="Password"
+                      />
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-lock"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-left">
+                      <input
+                        class="input"
+                        type="password"
+                        placeholder="Retype password"
+                      />
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-lock"></i>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div class="field">
+                    <p class="control">
+                      <button class="button is-success fill-button">
+                        Login
+                      </button>
+                    </p>
+                  </div>
+                  <br />
+                  <a href="login.html"
+                    ><span class="icon is-small"
+                      ><i class="fa fa-user"></i></span
+                    >&nbsp;Already have an account? Log in!</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <footer class="footer">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-4">
-                    <a href="index.html"><img class="footer-logo-image" src="images/logo-gray.png"></a>
-                    <p>Efficiently grow interdependent collaboration and idea-sharing via cost effective strategic theme areas. Continually visualize market-driven metrics without top-line technology. Energistically iterate top-line strategic theme areas whereas superior e-commerce. Monotonectally.</p>
-                </div>
-                <div class="column is-2 footer-menu">
-                    <h2 class="footer-menu-title">Company</h2>
-                    <ul>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4">
+            <a href="index.html"
+              ><img class="footer-logo-image" src="images/logo-gray.png"
+            /></a>
+            <p>
+              Efficiently grow interdependent collaboration and idea-sharing via
+              cost effective strategic theme areas. Continually visualize
+              market-driven metrics without top-line technology. Energistically
+              iterate top-line strategic theme areas whereas superior
+              e-commerce. Monotonectally.
+            </p>
+          </div>
+          <div class="column is-2 footer-menu">
+            <h2 class="footer-menu-title">Company</h2>
+            <ul>
+              <li><a href="about.html">Company</a></li>
+              <li><a href="terms.html">Terms </a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="column is-2 footer-menu">
+            <h2 class="footer-menu-title">Follow Us</h2>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-facebook"></i></a
+            ></span>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-twitter"></i></a
+            ></span>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-instagram"></i></a
+            ></span>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-medium"></i></a
+            ></span>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-whatsapp"></i></a
+            ></span>
+          </div>
 
-                        <li><a href="about.html">Company</a></li>
-                        <li><a href="terms.html">Terms </a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="column is-2 footer-menu">
-                    <h2 class="footer-menu-title">Follow Us</h2>
-                    <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-facebook"></i></a></span> <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-twitter"></i></a></span> <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-instagram"></i></a></span> <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-medium"></i></a></span> <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-whatsapp"></i></a></span>
-                </div>
+          <div class="column is-4">
+            <!-- <a href="#"><img class="footer-logo-image" src="https://paystack.com/assets/website/images/brand/badges/white.png"></a> -->
 
-                <div class="column is-4">
-                    <a href="#"><img class="footer-logo-image" src="https://paystack.com/assets/website/images/brand/badges/white.png"></a>
-
-                    <p>Efficiently grow interdependent collaboration and idea-sharing via cost effective strategic theme areas. Continually visualize market-driven metrics without top-line technology. Energistically iterate top-line strategic theme areas whereas superior e-commerce. Monotonectally.</p>
-                </div>
-            </div>
-            <div class="columns top-20">
-                <div class="column auto content has-text-centered">
-                    <p>&copy;2017 Iwemoto.com, All rights Resrved</p>
-                </div>
-            </div>
+            <p>
+              Efficiently grow interdependent collaboration and idea-sharing via
+              cost effective strategic theme areas. Continually visualize
+              market-driven metrics without top-line technology. Energistically
+              iterate top-line strategic theme areas whereas superior
+              e-commerce. Monotonectally.
+            </p>
+          </div>
         </div>
+        <div class="columns top-20">
+          <div class="column auto content has-text-centered">
+            <p>&copy;2021 Iwemoto.com, All rights Resrved</p>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

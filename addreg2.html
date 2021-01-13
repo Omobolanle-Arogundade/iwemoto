@@ -1,312 +1,394 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vehicle Registration Made Simple! - IweMoto.com</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/bulma.css" />
+    <link rel="stylesheet" href="css/topazdecimal.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vehicle Registration Made Simple! - IweMoto.com </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bulma.css">
-    <link rel="stylesheet" href="css/topazdecimal.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-</head>
-
-<body>
+  <body>
     <section class="">
-        <!-- Hero header: will stick at the top -->
-        <div class="hero-head">
-            <header class="nav has-shadow">
-                <div class="container">
-                    <div class="nav-left">
-                        <a href="index.html" class="nav-item">
-                            <img class="logor" src="images/logo2.png" alt="Logo">
-                        </a>
-                    </div>
-                    <span class="nav-toggle">
-                  <span></span>
-                    <span></span>
-
-                    </span>
-                    <div class="nav-right nav-menu">
-                        <a class="nav-item">
-                     Login
-                     </a>
-                        <span class="nav-item nav-button">
-                     <a class="button is-success is-outlined">
-                     <span class="icon">
-                     <i class="fa fa-user"></i>
-                     </span>
-                        <span>Sign up</span>
-                        </a>
-                        </span>
-                    </div>
-                </div>
-
-            </header>
-            <div class="page-title-bar">
-                <div class="container side-30">
-                    <div class="columns">
-                        <div class="column auto">
-                            <h2>Vehicle Details</h2>
-                        </div>
-                    </div>
-                </div>
+      <!-- Hero header: will stick at the top -->
+      <div class="hero-head">
+        <header class="nav has-shadow">
+          <div class="container">
+            <div class="nav-left">
+              <a href="index.html" class="nav-item">
+                <img class="logor" src="images/logo2.png" alt="Logo" />
+              </a>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="columns is-mobile">
-                <div class="column auto">
-                    <div class="steps">
-                        <div class="multistep-nav">
-                            <ol>
-                                <li class="actived">Add to Cart</li>
-                                <li>Confirm Order</li>
-                                <li>Checkout</li>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
+            <span class="nav-toggle">
+              <span></span>
+              <span></span>
+            </span>
+            <div class="nav-right nav-menu">
+              <a class="nav-item"> Login </a>
+              <span class="nav-item nav-button">
+                <a class="button is-success is-outlined">
+                  <span class="icon">
+                    <i class="fa fa-user"></i>
+                  </span>
+                  <span>Sign up</span>
+                </a>
+              </span>
             </div>
+          </div>
+        </header>
+        <div class="page-title-bar">
+          <div class="container side-30">
+            <div class="columns">
+              <div class="column auto">
+                <h2>Vehicle Details</h2>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container">
+      </div>
 
-            <div class="columns is-centered" style="padding:10px;">
-
-                <div class="column is-8 vehicle-slate slate-box is-narrow">
-
-                    <div class="columns">
-                        <div class="column is-4 dark-side">
-                            <h3 style="font-weight:300;"><span class="icon"><i class="fa fa-car"></i></span> Vehicle Details</h3>
-                            <hr style="margin-bottom:30px;">
-                            <h1 style="font-weight:300; font-size:48px; margin-bottom:20px;">AKD123FE</h1>
-                            <p style="margin-bottom:20px;">Toyota Corolla</p>
-                            <div id="modelmodal" class="button" style="margin-bottom:20px;">
-                                Select Vehicle Type
-                            </div>
-
-                        </div>
-                        <div class="column is-8 is-centered" style="background-color:#efefef;">
-                            <div class="vehicle-details">
-                                <table class="table is-fullwidth" style="background-color:#efefef;">
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="vehicle-feature">Plate Number: </span></td>
-                                            <td><span class="vehicle-value">AKD123DF</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="vehicle-feature">Vehicle Model: </span></td>
-                                            <td><span class="vehicle-value">Toyota Camry</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="vehicle-feature">Chassis Number: </span></td>
-                                            <td><span class="vehicle-value">9848898978979RNF9</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="vehicle-feature">Issue Date: </span></td>
-                                            <td><span class="vehicle-value">2017-06-23</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="vehicle-feature">Expiry Date: </span></td>
-                                            <td><span class="vehicle-value">2018-06-23</span></td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-                        <div class="modal-background"></div>
-                        <div class="modal-content">
-                            <div class="modalform">
-                                <h3 class="is-info">Select Vehicle Type</h3>
-                                <div class="field">
-                                    <label class="label">Vehicle Brand</label>
-                                    <div class="control">
-                                        <div class="select is-fullwidth">
-                                            <select>
-                                                              <option>Select Brand</option>
-                                                              <option>Toyota</option>
-                                                              <option>Honda</option>
-                                                              <option>Mercedes Benz</option>
-                                                              <option>Audi</option>
-                                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="field">
-                                    <label class="label">Vehicle Make</label>
-                                    <div class="control">
-                                        <div class="select is-fullwidth">
-                                            <select>
-                                                          <option>Corolla</option>
-                                                          <option>Venza</option>
-                                                          <option>Matrix</option>
-                                                          <option>FJ Cruiser</option>
-                                                          <option>Avensis</option>
-                                                        </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="control">
-                                    <button id="modalsubmit" class="button is-info">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                        <button id="modalclose" class="modal-close is-large" aria-label="close"></button>
-                    </div>
-                    <div class="columns options-set has-text-centered">
-                        <div class="column is-3 options-box">
-                            <img src="images/Group_2.svg" style="width:30%; height:auto;" />
-                            <h3>Vehicle Licence Only</h3>
-                            <p style="margin-bottom:20px;">Valid for 1 year</p>
-
-                            <h3 class="option-price" style="margin-bottom:30px; font-size:1.6em;">&#8358;23,000</h3>
-                            <div class="button is-info is-outlined" style="margin-bottom:20px;">
-                                Add to Cart
-                            </div>
-                        </div>
-                        <div class="column is-3 options-box">
-                            <img src="images/Group_6.svg" style="width:30%; height:auto;" />
-                            <h3>Third Party Insurance</h3>
-                            <p style="margin-bottom:20px;">1 Year Validity</p>
-
-                            <h3 class="option-price" style="margin-bottom:30px; font-size:1.6em;">&#8358;23,000</h3>
-                            <div class="button is-info is-outlined" style="margin-bottom:20px;">
-                                Add to Cart
-                            </div>
-                        </div>
-
-                        <div class="column is-3 options-box">
-                            <img src="images/Group_3.svg" style="width:30%; height:auto;" />
-                            <h3>Road Worthiness</h3>
-                            <p style="margin-bottom:20px;">Valid for 1 year</p>
-
-                            <h3 class="option-price" style="margin-bottom:30px; font-size:1.6em;">&#8358;23,000</h3>
-                            <div class="button is-info is-outlined" style="margin-bottom:20px;">
-                                Add to Cart
-                            </div>
-                        </div>
-                        <div class="column is-3 options-box">
-                            <img src="images/Group_3.svg" style="width:30%; height:auto;" />
-                            <h3>Hackney Permit</h3>
-                            <p style="margin-bottom:20px;">Valid for 1 year</p>
-
-                            <h3 class="option-price" style="margin-bottom:30px; font-size:1.6em;">&#8358;23,000</h3>
-                            <div class="button is-info is-outlined" style="margin-bottom:20px;">
-                                Add to Cart
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-                    <hr>
-
-                    <div style="text-align:center;">
-                        <a href="cart.html" class="button is-centered is-success is-medium" style="padding: 10px 20px;"><span>Proceed to Checkout</span> <span class="icon"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span></a>
-                    </div>
-
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column auto">
+            <div class="steps">
+              <div class="multistep-nav">
+                <ol>
+                  <li class="actived">Add to Cart</li>
+                  <li>Confirm Order</li>
+                  <li>Checkout</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="columns is-centered" style="padding: 10px">
+          <div class="column is-8 vehicle-slate slate-box is-narrow">
+            <div class="columns">
+              <div class="column is-4 dark-side">
+                <h3 style="font-weight: 300">
+                  <span class="icon"><i class="fa fa-car"></i></span> Vehicle
+                  Details
+                </h3>
+                <hr style="margin-bottom: 30px" />
+                <h1
+                  style="font-weight: 300; font-size: 48px; margin-bottom: 20px"
+                >
+                  AKD123FE
+                </h1>
+                <p style="margin-bottom: 20px">Toyota Corolla</p>
+                <div id="modelmodal" class="button" style="margin-bottom: 20px">
+                  Select Vehicle Type
                 </div>
+              </div>
+              <div
+                class="column is-8 is-centered"
+                style="background-color: #efefef"
+              >
+                <div class="vehicle-details">
+                  <table
+                    class="table is-fullwidth"
+                    style="background-color: #efefef"
+                  >
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="vehicle-feature">Plate Number: </span>
+                        </td>
+                        <td><span class="vehicle-value">AKD123DF</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vehicle-feature">Vehicle Model: </span>
+                        </td>
+                        <td><span class="vehicle-value">Toyota Camry</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vehicle-feature">Chassis Number: </span>
+                        </td>
+                        <td>
+                          <span class="vehicle-value">9848898978979RNF9</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vehicle-feature">Issue Date: </span>
+                        </td>
+                        <td><span class="vehicle-value">2021-06-23</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="vehicle-feature">Expiry Date: </span>
+                        </td>
+                        <td><span class="vehicle-value">2018-06-23</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <div class="modalform">
+                  <h3 class="is-info">Select Vehicle Type</h3>
+                  <div class="field">
+                    <label class="label">Vehicle Brand</label>
+                    <div class="control">
+                      <div class="select is-fullwidth">
+                        <select>
+                          <option>Select Brand</option>
+                          <option>Toyota</option>
+                          <option>Honda</option>
+                          <option>Mercedes Benz</option>
+                          <option>Audi</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Vehicle Make</label>
+                    <div class="control">
+                      <div class="select is-fullwidth">
+                        <select>
+                          <option>Corolla</option>
+                          <option>Venza</option>
+                          <option>Matrix</option>
+                          <option>FJ Cruiser</option>
+                          <option>Avensis</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="control">
+                    <button id="modalsubmit" class="button is-info">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button
+                id="modalclose"
+                class="modal-close is-large"
+                aria-label="close"
+              ></button>
+            </div>
+            <div class="columns options-set has-text-centered">
+              <div class="column is-3 options-box">
+                <img
+                  src="images/Group_2.svg"
+                  style="width: 30%; height: auto"
+                />
+                <h3>Vehicle Licence Only</h3>
+                <p style="margin-bottom: 20px">Valid for 1 year</p>
+
+                <h3
+                  class="option-price"
+                  style="margin-bottom: 30px; font-size: 1.6em"
+                >
+                  &#8358;23,000
+                </h3>
+                <div
+                  class="button is-info is-outlined"
+                  style="margin-bottom: 20px"
+                >
+                  Add to Cart
+                </div>
+              </div>
+              <div class="column is-3 options-box">
+                <img
+                  src="images/Group_6.svg"
+                  style="width: 30%; height: auto"
+                />
+                <h3>Third Party Insurance</h3>
+                <p style="margin-bottom: 20px">1 Year Validity</p>
+
+                <h3
+                  class="option-price"
+                  style="margin-bottom: 30px; font-size: 1.6em"
+                >
+                  &#8358;23,000
+                </h3>
+                <div
+                  class="button is-info is-outlined"
+                  style="margin-bottom: 20px"
+                >
+                  Add to Cart
+                </div>
+              </div>
+
+              <div class="column is-3 options-box">
+                <img
+                  src="images/Group_3.svg"
+                  style="width: 30%; height: auto"
+                />
+                <h3>Road Worthiness</h3>
+                <p style="margin-bottom: 20px">Valid for 1 year</p>
+
+                <h3
+                  class="option-price"
+                  style="margin-bottom: 30px; font-size: 1.6em"
+                >
+                  &#8358;23,000
+                </h3>
+                <div
+                  class="button is-info is-outlined"
+                  style="margin-bottom: 20px"
+                >
+                  Add to Cart
+                </div>
+              </div>
+              <div class="column is-3 options-box">
+                <img
+                  src="images/Group_3.svg"
+                  style="width: 30%; height: auto"
+                />
+                <h3>Hackney Permit</h3>
+                <p style="margin-bottom: 20px">Valid for 1 year</p>
+
+                <h3
+                  class="option-price"
+                  style="margin-bottom: 30px; font-size: 1.6em"
+                >
+                  &#8358;23,000
+                </h3>
+                <div
+                  class="button is-info is-outlined"
+                  style="margin-bottom: 20px"
+                >
+                  Add to Cart
+                </div>
+              </div>
             </div>
 
+            <hr />
 
-
-
-
+            <div style="text-align: center">
+              <a
+                href="cart.html"
+                class="button is-centered is-success is-medium"
+                style="padding: 10px 20px"
+                ><span>Proceed to Checkout</span>
+                <span class="icon"
+                  ><i
+                    class="fa fa-arrow-circle-o-right"
+                    aria-hidden="true"
+                  ></i></span
+              ></a>
+            </div>
+          </div>
         </div>
-
+      </div>
     </section>
     <footer class="footer">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-4">
-                    <a href="index.html"><img class="footer-logo-image" src="images/logo-gray.png"></a>
-                    <p>Efficiently grow interdependent collaboration and idea-sharing via cost effective strategic theme areas. Continually visualize market-driven metrics without top-line technology. Energistically iterate top-line strategic theme areas
-                        whereas superior e-commerce. Monotonectally.</p>
-                </div>
-                <div class="column is-2 footer-menu">
-                    <h2 class="footer-menu-title">Company</h2>
-                    <ul>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4">
+            <a href="index.html"
+              ><img class="footer-logo-image" src="images/logo-gray.png"
+            /></a>
+            <p>
+              Efficiently grow interdependent collaboration and idea-sharing via
+              cost effective strategic theme areas. Continually visualize
+              market-driven metrics without top-line technology. Energistically
+              iterate top-line strategic theme areas whereas superior
+              e-commerce. Monotonectally.
+            </p>
+          </div>
+          <div class="column is-2 footer-menu">
+            <h2 class="footer-menu-title">Company</h2>
+            <ul>
+              <li><a href="about.html">Company</a></li>
+              <li><a href="terms.html">Terms </a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="column is-2 footer-menu">
+            <h2 class="footer-menu-title">Follow Us</h2>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-facebook"></i></a
+            ></span>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-twitter"></i></a
+            ></span>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-instagram"></i></a
+            ></span>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-medium"></i></a
+            ></span>
+            <span class="has-text-success icon">
+              <a href="#"><i class="fa fa-whatsapp"></i></a
+            ></span>
+          </div>
 
-                        <li><a href="about.html">Company</a></li>
-                        <li><a href="terms.html">Terms </a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="column is-2 footer-menu">
-                    <h2 class="footer-menu-title">Follow Us</h2>
-                    <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-facebook"></i></a></span> <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-twitter"></i></a></span> <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-instagram"></i></a></span> <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-medium"></i></a></span> <span class="has-text-success icon">
-            <a href="#"><i class="fa fa-whatsapp"></i></a></span>
-                </div>
+          <div class="column is-4">
+            <!-- <a href="#"><img class="footer-logo-image" src="https://paystack.com/assets/website/images/brand/badges/white.png"></a> -->
 
-                <div class="column is-4">
-                    <a href="#"><img class="footer-logo-image" src="https://paystack.com/assets/website/images/brand/badges/white.png"></a>
-
-                    <p>Efficiently grow interdependent collaboration and idea-sharing via cost effective strategic theme areas. Continually visualize market-driven metrics without top-line technology. Energistically iterate top-line strategic theme areas
-                        whereas superior e-commerce. Monotonectally.</p>
-                </div>
-            </div>
-            <div class="columns top-20">
-                <div class="column auto content has-text-centered">
-                    <p>&copy;2017 Iwemoto.com, All rights Resrved</p>
-                </div>
-            </div>
+            <p>
+              Efficiently grow interdependent collaboration and idea-sharing via
+              cost effective strategic theme areas. Continually visualize
+              market-driven metrics without top-line technology. Energistically
+              iterate top-line strategic theme areas whereas superior
+              e-commerce. Monotonectally.
+            </p>
+          </div>
         </div>
+        <div class="columns top-20">
+          <div class="column auto content has-text-centered">
+            <p>&copy;2021 Iwemoto.com, All rights Resrved</p>
+          </div>
+        </div>
+      </div>
     </footer>
     <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
+      // Get the modal
+      var modal = document.getElementById("myModal");
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("modelmodal");
+      // Get the button that opens the modal
+      var btn = document.getElementById("modelmodal");
 
-        // Get the <span> element that closes the modal
-        var clsmd = document.getElementById("modalclose");
+      // Get the <span> element that closes the modal
+      var clsmd = document.getElementById("modalclose");
 
-        var myModalClasses = document.getElementById("myModal").classList;
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function() {
+      var myModalClasses = document.getElementById("myModal").classList;
+      // When the user clicks on the button, open the modal
+      btn.onclick = function () {
+        myModalClasses.add("is-active");
+      };
 
-            myModalClasses.add("is-active");
+      // When the user clicks on X, close the modal
+      clsmd.onclick = function () {
+        myModalClasses.remove("is-active");
+      };
+
+      //When the user submits Vehicle details
+      document.getElementById("modalsubmit").onclick = function () {
+        myModalClasses.remove("is-active");
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          myModalClasses.remove("is-active");
         }
-
-        // When the user clicks on X, close the modal
-        clsmd.onclick = function() {
-            myModalClasses.remove("is-active");
-        }
-
-        //When the user submits Vehicle details
-        document.getElementById("modalsubmit").onclick = function() {
-            myModalClasses.remove("is-active");
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                myModalClasses.remove("is-active");
-            }
-        }
+      };
     </script>
-
-</body>
-
+  </body>
 </html>

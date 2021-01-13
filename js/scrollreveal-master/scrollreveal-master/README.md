@@ -2,7 +2,7 @@
 
 [![ScrollReveal Demo](https://scrollrevealjs.org/assets/scrollreveal-demo.png)](https://scrollrevealjs.org)
 
-***
+---
 
 [![License][license-image]][license-url]
 [![NPM version][npm-image]][npm-url]
@@ -12,7 +12,7 @@
 - No dependencies
 - From the ![heart](http://i.imgur.com/oXJmdtz.gif) of [@jlmakes](https://twitter.com/jlmakes)
 
-***
+---
 
 ## 1. Getting Started
 
@@ -36,29 +36,33 @@ The `reveal()` method is the primary API, and makes it easy to create and manage
 
 ```html
 <!-- HTML -->
-<div class="foo"> Foo </div>
-<div class="bar"> Bar </div>
+<div class="foo">Foo</div>
+<div class="bar">Bar</div>
 ```
+
 ```js
 // JavaScript
 window.sr = ScrollReveal();
-sr.reveal('.foo');
-sr.reveal('.bar');
+sr.reveal(".foo");
+sr.reveal(".bar");
 ```
 
 ## 2. Configuration
+
 Passing a configuration object to `ScrollReveal()` changes the defaults for all reveals, and passing `reveal()` a configuration object customizes that reveal set further.
 
 #### 2.1. Practical Example
+
 ```js
 // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
-sr.reveal('.foo', { duration: 200 });
+sr.reveal(".foo", { duration: 200 });
 ```
 
 #### 2.2. The Starting Defaults
+
 ```js
 // 'bottom', 'left', 'top', 'right'
 origin: 'bottom',
@@ -124,18 +128,18 @@ afterReset: function (domEl) {}
 
 You can pass a sequence interval (in milliseconds) to the `reveal()` method, making sequenced animations a breeze.
 
->**Note:** The interval is the time until the next element in the sequence begins its reveal, which is separate from the time until the element’s animation completes. In this example, the animation duration is 2 seconds, but the sequence interval is 50 milliseconds.
+> **Note:** The interval is the time until the next element in the sequence begins its reveal, which is separate from the time until the element’s animation completes. In this example, the animation duration is 2 seconds, but the sequence interval is 50 milliseconds.
 
 ```js
 // interval passed to reveal
 window.sr = ScrollReveal({ duration: 2000 });
-sr.reveal('.box', 50);
+sr.reveal(".box", 50);
 
 // or...
 
 // interval and custom config passed to reveal
 window.sr = ScrollReveal();
-sr.reveal('.box', { duration: 2000 }, 50);
+sr.reveal(".box", { duration: 2000 }, 50);
 ```
 
 ![sequencer](https://cloud.githubusercontent.com/assets/2044842/13556788/a7dda6c6-e3e2-11e5-93fa-d6a227cbb5dc.gif)
@@ -145,38 +149,39 @@ sr.reveal('.box', { duration: 2000 }, 50);
 You are not just limited to using selectors with `reveal()`, it also accepts a Node or Node List as the first argument.
 
 ```js
-sr.reveal(document.getElementById('foo'));
-sr.reveal(document.querySelectorAll('.bar'));
+sr.reveal(document.getElementById("foo"));
+sr.reveal(document.querySelectorAll(".bar"));
 ```
 
 #### 3.3. Custom/Multiple Containers
 
 The default container is the viewport, but you can assign any container to any reveal set.
 
->**Tip:** ScrollReveal works just as well with horizontally scrolling containers too!
+> **Tip:** ScrollReveal works just as well with horizontally scrolling containers too!
 
 ```html
 <div id="fooContainer">
-  <div class="foo"> Foo 1 </div>
-  <div class="foo"> Foo 2 </div>
-  <div class="foo"> Foo 3 </div>
+  <div class="foo">Foo 1</div>
+  <div class="foo">Foo 2</div>
+  <div class="foo">Foo 3</div>
 </div>
 
 <div id="barContainer">
-  <div class="bar"> Bar 1 </div>
-  <div class="bar"> Bar 2 </div>
-  <div class="bar"> Bar 3 </div>
+  <div class="bar">Bar 1</div>
+  <div class="bar">Bar 2</div>
+  <div class="bar">Bar 3</div>
 </div>
 ```
+
 ```js
 window.sr = ScrollReveal();
 
 // as a DOM node...
-var fooContainer = document.getElementById('fooContainer');
-sr.reveal('.foo', { container: fooContainer });
+var fooContainer = document.getElementById("fooContainer");
+sr.reveal(".foo", { container: fooContainer });
 
 // as a selector...
-sr.reveal('.bar', { container: '#barContainer' });
+sr.reveal(".bar", { container: "#barContainer" });
 ```
 
 #### 3.4. Asynchronous Content
@@ -198,37 +203,37 @@ _Example:_
 <div class="foo">foo async</div>
 <div class="foo">foo async</div>
 ```
+
 ```js
 var fooContainer, content, sr, xmlhttp;
 
-fooContainer = document.getElementById('fooContainer');
+fooContainer = document.getElementById("fooContainer");
 
 sr = ScrollReveal();
-sr.reveal('.foo', { container: fooContainer });
+sr.reveal(".foo", { container: fooContainer });
 
 // Setup a new asynchronous request...
 xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
+xmlhttp.onreadystatechange = function () {
   if (xmlhttp.readyState == XMLHttpRequest.DONE) {
     if (xmlhttp.status == 200) {
-
       // Turn our response into HTML...
-      var content = document.createElement('div');
+      var content = document.createElement("div");
       content.innerHTML = xmlhttp.responseText;
       content = content.childNodes;
 
       // Add each element to the DOM...
       for (var i = 0; i < content.length; i++) {
-        fooContainer.appendChild(content[ i ]);
-      };
+        fooContainer.appendChild(content[i]);
+      }
 
       // Finally!
       sr.sync();
     }
   }
-}
+};
 
-xmlhttp.open('GET', 'ajax.html', true);
+xmlhttp.open("GET", "ajax.html", true);
 xmlhttp.send();
 ```
 
@@ -255,18 +260,16 @@ _Example:_
     </script>
   </head>
   <body>
-
     <div class="fooContainer">
-      <div class="fooReveal"> Foo </div>
-      <div class="fooReveal"> Foo </div>
-      <div class="fooReveal"> Foo </div>
+      <div class="fooReveal">Foo</div>
+      <div class="fooReveal">Foo</div>
+      <div class="fooReveal">Foo</div>
     </div>
 
     <!-- make reveal calls last -->
     <script>
-      sr.reveal('.fooReveal', { container: '.fooContainer' });
+      sr.reveal(".fooReveal", { container: ".fooContainer" });
     </script>
-
   </body>
 </html>
 ```
@@ -278,6 +281,7 @@ In most cases, your elements will start at `opacity: 0` so they can fade in. How
 The ideal solution is to **set your reveal elements visibility to hidden** in the `<head>` of your page, to ensure they render hidden while your JavaScript loads:
 
 _Continuing our example from 4.1._
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -290,42 +294,40 @@ _Continuing our example from 4.1._
       // Add class to <html> if ScrollReveal is supported
       // Note: this method is deprecated, and only works in version 3
       if (sr.isSupported()) {
-        document.documentElement.classList.add('sr');
+        document.documentElement.classList.add("sr");
       }
-
     </script>
 
     <style>
-
       /* Ensure elements load hidden before ScrollReveal runs */
-      .sr .fooReveal { visibility: hidden; }
-
+      .sr .fooReveal {
+        visibility: hidden;
+      }
     </style>
-
   </head>
   <body>
-
     <div class="fooContainer">
-      <div class="fooReveal"> Foo </div>
-      <div class="fooReveal"> Foo </div>
-      <div class="fooReveal"> Foo </div>
+      <div class="fooReveal">Foo</div>
+      <div class="fooReveal">Foo</div>
+      <div class="fooReveal">Foo</div>
     </div>
 
     <!-- make reveal calls last -->
     <script>
-      sr.reveal('.fooReveal', { container: '.fooContainer' });
+      sr.reveal(".fooReveal", { container: ".fooContainer" });
     </script>
-
   </body>
 </html>
 ```
->**Note:** If you prefer not to put styles in the `<head>` of your page, including this style in your primary stylesheet will still help with element flickering since your CSS will likely load before your JavaScript.
+
+> **Note:** If you prefer not to put styles in the `<head>` of your page, including this style in your primary stylesheet will still help with element flickering since your CSS will likely load before your JavaScript.
 
 #### 4.3. Add Perspective to 3D Rotation
 
 ScrollReveal supports 3d rotation out of the box, but you may want to emphasize the effect by specifying a perspective property on your container.
 
 _Continuing our example from 4.2._
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -338,43 +340,44 @@ _Continuing our example from 4.2._
       // Add class to <html> if ScrollReveal is supported
       // Note: this method is deprecated, and only works in version 3
       if (sr.isSupported()) {
-        document.documentElement.classList.add('sr');
+        document.documentElement.classList.add("sr");
       }
-
     </script>
 
     <style>
-
       /* Ensure elements load hidden before ScrollReveal runs */
-      .sr .fooReveal { visibility: hidden; }
+      .sr .fooReveal {
+        visibility: hidden;
+      }
 
       /* add perspective to your container */
-      .fooContainer { perspective: 800px; }
-
+      .fooContainer {
+        perspective: 800px;
+      }
     </style>
-
   </head>
   <body>
-
     <div class="fooContainer">
-      <div class="fooReveal"> Foo </div>
-      <div class="fooReveal"> Foo </div>
-      <div class="fooReveal"> Foo </div>
+      <div class="fooReveal">Foo</div>
+      <div class="fooReveal">Foo</div>
+      <div class="fooReveal">Foo</div>
     </div>
 
-  <!-- make reveal calls last -->
+    <!-- make reveal calls last -->
     <script>
       // use rotation in reveal configuration
-      sr.reveal('.fooReveal', { container: '.fooContainer', rotate: {x: 65} });
+      sr.reveal(".fooReveal", {
+        container: ".fooContainer",
+        rotate: { x: 65 },
+      });
     </script>
-
   </body>
 </html>
 ```
 
 ## 5. Appendix
 
-Open source under the [MIT License](https://github.com/jlmakes/scrollreveal.js/blob/master/LICENSE.md). ©2014–2017 Julian Lloyd.
+Open source under the [MIT License](https://github.com/jlmakes/scrollreveal.js/blob/master/LICENSE.md). ©2014–2021 Julian Lloyd.
 
 #### 5.1. Browser Compatibility
 

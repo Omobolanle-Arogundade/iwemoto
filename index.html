@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/topazdecimal.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+    
     <script src="js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="css/iphone7.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -20,278 +22,385 @@
     <meta name="theme-color" content="#ffffff">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+    <script src="https://unpkg.com/vuex"></script>
     <script type="text/javascript">
         jQuery(document).ready(function() {
             $('#searchplate').click(function() {
                 $('html').append('<div class="redirect-overlay" style="position: fixed; font-family: Helvetica, Arial; height: 100%; width: 100%; background: #FFFFFF; top: 0px; left: 0px; z-index: 999999;"><div style="margin: 5% auto; text-align: center; padding: 0px 20px; max-width: 600px;"><img src="images/magnify.gif" style="max-width: 100%;"><p style="font-size: 20px; text-align: center; clear: both;">Your vehicle details are being fetched for easy registration and renewal of documents.</p><img src="http://hotels.mobiashara.com/sites/default/files/transition/waiting1.png" style="width: 30%; margin-right: 3%; float: left;"><img src="http://hotels.mobiashara.com/sites/default/files/transition/waiting2.png" style="width: 30%; margin-right: 3%; float: left;"><img src="http://hotels.mobiashara.com/sites/default/files/transition/waiting3.png" style="width: 30%; float: left;"><div style="clear:both;"></div></div><div style="width:100%; margin:4px auto; text-align:center;"><a href="http://hotels.mobiashara.com" target="_blank"><img src="images/logo2.png" style="max-width: 300px; height:auto; padding-left:"></a></div></div>');
             });
+
+            // Get the modal
+            var modal = document.getElementById("theModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+                    
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("modal-close")[0];
+            
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
         });
+
+
     </script>
 </head>
 
 <body>
-    <section class="hero is-info bg-head is-fullheight">
-        <!-- Hero header: will stick at the top -->
-        <div class="hero-head">
-            <header class="nav">
-                <div class="container">
-                    <div class="nav-left">
-                        <a href="index.html" class="nav-item"> <img src="images/logo-gray.png" alt="Logo"> </a>
-                    </div> <span class="nav-toggle">
-          <span></span> <span></span> <span></span> </span>
-                    <div class="nav-right nav-menu"> <a href="login.html" class="nav-item">
-            Login
-          </a> <span class="nav-item">
-            <a href="signup.html" class="button is-success is-inverted">
-              <span class="icon">
-                <i class="fa fa-user"></i>
-              </span> <span>Sign up</span> </a>
-                        </span>
+    <div id="app">
+        <section class="hero is-info bg-head is-fullheight">
+            <!-- Hero header: will stick at the top -->
+            <div class="hero-head">
+                <header class="nav">
+                    <div class="container">
+                        <div class="nav-left">
+                            <a href="index.html" class="nav-item"> <img src="images/logo-gray.png" alt="Logo"> </a>
+                        </div> <span class="nav-toggle">
+              <span></span> <span></span> <span></span> </span>
+                        <div class="nav-right nav-menu"> <a href="#" class="nav-item">
+                Papers
+              </a> <span class="nav-item">
+                <a href="#mDoctor" class="button is-success is-inverted">
+                  <span class="icon">
+                    <i class="fa fa-user-md"></i>
+                  </span> <span>Motor Doctor</span> </a>
+                            </span>
+                        </div>
                     </div>
-                </div>
-            </header>
-        </div>
-        <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-            <div class="container side-50">
-                <div class="columns">
-                    <div class="column is-6" style="padding:10% 0%">
-                        <h1 class="title animated flipInX" style="margin-bottom:20px; ">
-                            Complete Vehicle Solution!
-                        </h1>
-                        <h3 class="subtitle animated flipInX" style="margin:20px 0px;">
-                            Fill in your plate and phone numbers to get started. 
-                        </h3>
-                        <form>
-                            <div class="field is-horizontal">
-                                <div class="field-body">
-                                    <div class="field ">
-                                        <p class="control is-expanded has-icons-left">
-                                            <input class="input is-medium" type="text" placeholder="Plate No."> <span class="icon is-small is-left">
-          <i class="fa fa-car"></i>
-        </span> </p>
-                                        <p class="help">Eg. ABC123DE</p>
-                                    </div>
-                                    <div class="field is-expanded">
-                                        <div class="field has-addons">
-                                            <p class="control "><a class="button is-medium is-static">+234</a> </p>
-                                            <p class="control is-expanded">
-                                                <input class="input is-medium" type="tel" placeholder="Phone No."> </p>
+                </header>
+            </div>
+            <!-- Hero content: will be in the middle -->
+            <div class="hero-body">
+                <div class="container side-50">
+                    <div class="columns">
+                        <div class="column is-6" style="padding:10% 0%">
+                            <h1 class="title animated flipInX" style="margin-bottom:20px; ">
+                                Complete Vehicle Solution!
+                            </h1>
+                            <h3 class="subtitle animated flipInX" style="margin:20px 0px;">
+                                Fill in your plate and phone numbers to get started. 
+                            </h3>
+                            <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzgE8EutZKU69CAVA6w1RajR7Av_49wDHMU4mLhNTRpkx7xBas0UJSW/exec">
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field ">
+                                            <p class="control is-expanded has-icons-left">
+                                                <input name="plateNo" class="input is-medium" type="text" placeholder="Plate No."> <span class="icon is-small is-left">
+              <i class="fa fa-car"></i>
+            </span> </p>
+                                            <p class="help">Eg. ABC123DE</p>
                                         </div>
-                                        <p class="help">Do not enter the first zero</p>
-                                    </div>
-                                    <div class="field">
-                                        <div class="control">
-                                            <button type="submit" formaction="addreg2.html" id="searchplate" class="button is-medium is-success"> Get Started </button>
+                                        <div class="field is-expanded">
+                                            <div class="field has-addons">
+                                                <p class="control "><a class="button is-medium is-static">+234</a> </p>
+                                                <p class="control is-expanded">
+                                                    <input name="phone" class="input is-medium" type="tel" placeholder="Phone No."> </p>
+                                            </div>
+                                            <p class="help">Do not enter the first zero</p>
+                                        </div>
+                                        <div class="field">
+                                            <div class="control">
+                                                <button type="submit" id="searchplate" class="button is-medium is-success"> Get Started </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-
-                        <div class="animated shake" style="margin-top:20px;">
-                            <a href="newreg.html" class="" style="color:#f7f7f7;"> <span class="icon is-small"><i class="fa fa-star"></i></span> &nbsp; New Vehicle? Click here to register!</a>
-                        </div>
-                    </div>
-                    <div class="column is-6 is-centered ">
-
-                        <!-- <div class="phone">
-                            <div class="flexbox-row">
-                                <div class="camera"></div>
-                                <div class="speaker"></div>
-                            </div>
-                            <div class="screen">
-                                <video width="236" height="419" autoplay muted loop>
-                                    <source src="images/demovid.webm" type="video/webm">
-                                    
-                                    Your browser does not support HTML5 video.
-                                    <img src="images/demovid.gif" />
-                                  </video>
-
-                            </div>
-                            <div class="buttonx"></div>
-                        </div> -->
-
-                        <!-- <div class="conta">
-                            <div class="tampa">
-                                <div class="camera">
-                                    <div class="pisca-web"></div>
-                                </div>
-                                <div class="tela">
-                                    <video width="396" height="230" autoplay muted loop>
-  <source src="images/frames.webm" type="video/webm">
-  
-  Your browser does not support HTML5 video.
-</video>
-                                </div>
-                            </div>
-                            <div class="teclado">
-                                <div class="mouse"></div>
-                            </div>
-                            <div class="sombra-dir"></div>
-                            <div class="sombra-esq"></div>
-
-                        </div> -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section style="background-color:#fafafa; padding-top:50px; padding-bottom:50px">
-        <div class="container" style="padding-left:30px; padding-right:30px;">
-            <div class="columns is-centered">
-                <div class="column is-8 is-narrow has-text-centered" style="margin-top:5%; margin-bottom:1%;">
-                    <h2 class="animated flipInX" style="font-size:2em; font-weight:500; line-height:100%;">Complete Vehicle Solution</h2>
-                </div>
-            </div>
-            <div class="columns is-centered">
-                <div class="column is-8 is-narrow">
-                    <div class="columns feature-list-box" style="margin-bottom:5%;">
-                        <div class="column is-4 feature-list has-text-centered feat">
-                            <img class="animated jello" src="images/easy.svg" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>Vehicle Papers</h2>
-                            <p>Drive with Confidence when you subscribe to our vehicle papers management system. Dial *384*13# to get started.</p>
-                        </div>
-                        <div class="column is-4 feature-list has-text-centered feat">
-                            <img class="animated jello" src="images/speed.svg" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>Motor Doctor</h2>
-                            <p>Get instant technical assistance to diagnose your vehicle issues from our certified technicians. Subscribe to our weekly newsletters on preventive maintenance (100% guarantee to save your money).</p>
-                        </div>
-                        <div class="column is-4 feature-list has-text-centered feat"> <img class="animated jello" src="images/safe.svg" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>Spare Parts</h2>
-                            <p>We are the plug to original tokunbo and brand spare parts such as shock absorber, brake-pad, tyre, battery and many more.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section style="background-color:#fff;">
-        <div class="container side-50" style="padding:50px 30px 60px 30px;">
-            <div class="columns">
-                <div class="foo column is-6 has-text-centered" style="margin-top:5%; margin-bottom:5%;">
-                    <img src="images/side2.jpg" style="margin:30px auto 10px auto; width:70%; height:auto;" />
-                </div>
-                                <div class="column is-6" style="margin-top:1%; margin-bottom:5%; padding:10px;">
-                    <h2 style="width:90%; font-size:2em; font-weight:500; line-height:100%; margin-top:50px;margin-bottom:20px;">24-Hour Emergency Recovery Service</h2>
-                    <div style="width:90%;">With phone lines open 24/7, we’re available to recover broken down vehicles from the point of occurrence  at any time of the day. <br><br> <b>Security:</b> Our vast interconnectivity of recovery network allows us fast access to deploy the nearest recovery services to you within the shortest possible time. This reduces the probability of being a victim of social vice at odd hours of the day.<br><br><b>Convenience:</b> Seamless recovery.  Your rescue is just one call away.<br><br><b>No Camouflaged Fees:</b>  You already purchased the card - that’s all you need for your one-year auto towing subscription.
-
-
-
-
-
-                    </div>
-                </div>
-
-            </div>
-    </section>
-    <section style="background-color:#fafafa; padding-top:50px; padding-bottom:50px">
-        <div class="container" style="padding-left:30px; padding-right:30px;">
-            <div class="columns is-centered">
-                <div class="column is-8 is-narrow has-text-centered" style="margin-top:5%; margin-bottom:1%;">
-                    <h2 class="animated flipInX" style="font-size:2em; font-weight:500; line-height:100%;">Our Services</h2>
-                </div>
-            </div>
-            <div class="columns is-centered">
-                <div class="column is-12 is-narrow">
-                    <div class="columns feature-list-box" style="margin-bottom:5%;">
-                        <div class="column is-2 feature-list has-text-centered feat">
-                            <img class="animated jello" src="images/servicing.png" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>Routine Servicing</h2>
-                        </div>
-                        <div class="column is-2 feature-list has-text-centered feat">
-                            <img class="animated jello" src="images/ac.png" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>AC Repair & Services</h2>
-                        </div>
-                        <div class="column is-2 feature-list has-text-centered feat"> <img class="animated jello" src="images/tyre.png" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>Tyre & Wheels</h2>
-                        </div>
-                        <div class="column is-2 feature-list has-text-centered feat"> <img class="animated jello" src="images/brakes.png" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>Brake System</h2>
-                        </div>                        
-                        <div class="column is-2 feature-list has-text-centered feat"> <img class="animated jello" src="images/suspensions.png" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>Suspension</h2>
-                        </div>                        
-                        <div class="column is-2 feature-list has-text-centered feat"> <img class="animated jello" src="images/battery.png" style="margin-bottom:10px; width:100px; height:auto;" />
-                            <h2>Battery</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section
-    <section style="background-color:#f7f7f7;">
-        <div class="container side-50">
-            <div class="columns is-centered">
-                <div class="column is-10 is-narrow has-text-centered" style="padding:60px 30px 60px 30px;">
-                    <h2 style="color:#666; font-size:1.6em; margin-bottom:30px;" class="is-info">Act now, Get signed up for 24-Hour Emergency Recovery Service.</h2>
-                    <a href="index.html" class="button is-info is-large">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                            </form>
     
-    <section style="background-color:#fff;">
-        <div class="container side-50" style="padding:50px 30px 60px 30px;">
-            <div class="columns">
-                <div class="column is-6" style="margin-top:5%; margin-bottom:1%; padding:10px;">
-                    <h2 style="width:90%; font-size:2em; font-weight:500; line-height:100%; margin-top:50px;margin-bottom:20px;">Genuine OEM and Aftermarket Vehicle Parts</h2>
-                    <div style="width:90%;">Visit our ecommerce store for genuine, OEM & aftermarket vehicle parts from both local and international dealers. <br><br>
-
-
-
-<a href="index.html" class="button is-info is-large">Order Now</a>
-
+                            <div class="animated shake" style="margin-top:20px;">
+                                <a href="newreg.html" class="" style="color:#f7f7f7;"> <span class="icon is-small"><i class="fa fa-star"></i></span> &nbsp; New Vehicle? Click here to register!</a>
+                            </div>
+                        </div>
+                        <div class="column is-6 is-centered ">
+    
+                            <!-- <div class="phone">
+                                <div class="flexbox-row">
+                                    <div class="camera"></div>
+                                    <div class="speaker"></div>
+                                </div>
+                                <div class="screen">
+                                    <video width="236" height="419" autoplay muted loop>
+                                        <source src="images/demovid.webm" type="video/webm">
+                                        
+                                        Your browser does not support HTML5 video.
+                                        <img src="images/demovid.gif" />
+                                      </video>
+    
+                                </div>
+                                <div class="buttonx"></div>
+                            </div> -->
+    
+                            <!-- <div class="conta">
+                                <div class="tampa">
+                                    <div class="camera">
+                                        <div class="pisca-web"></div>
+                                    </div>
+                                    <div class="tela">
+                                        <video width="396" height="230" autoplay muted loop>
+      <source src="images/frames.webm" type="video/webm">
+      
+      Your browser does not support HTML5 video.
+    </video>
+                                    </div>
+                                </div>
+                                <div class="teclado">
+                                    <div class="mouse"></div>
+                                </div>
+                                <div class="sombra-dir"></div>
+                                <div class="sombra-esq"></div>
+    
+                            </div> -->
+    
+                        </div>
                     </div>
                 </div>
-                <div class="foo column is-6 has-text-centered" style="margin-top:5%; margin-bottom:1%;">
-                    <img src="images/car-parts2.png" style="margin:30px auto 10px auto; width:90%; height:auto;" />
-                </div>
-                                
-
             </div>
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-4">
-                    <a href="index.html"><img class="footer-logo-image" src="images/logo-gray.png"></a>
-                    <p>Motormata is a complete vehicle solution that is dedicated to buiding a one stop access point to all vehicle needs in Nigeria with the use of technology.</p>
+        </section>
+        <section style="background-color:#fafafa; padding-top:50px; padding-bottom:50px">
+            <div class="container" style="padding-left:30px; padding-right:30px;">
+                <div class="columns is-centered">
+                    <div class="column is-8 is-narrow has-text-centered" style="margin-top:5%; margin-bottom:1%;">
+                        <h2 class="animated flipInX" style="font-size:2em; font-weight:500; line-height:100%;">Complete Vehicle Solution</h2>
+                    </div>
                 </div>
-                <div class="column is-2 footer-menu">
-                    <h2 class="footer-menu-title">Company</h2>
-                    <ul>
-
-                        <li><a href="about.html">Company</a></li>
-                        <li><a href="terms.html">Terms </a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="column is-3 footer-menu">
-                    <h2 class="footer-menu-title">Follow Us</h2>
-                    <span class="has-text-success icon">
-                    <a href="https://www.facebook.com/motormata"><i class="fa fa-facebook"></i></a></span> <span class="has-text-success icon">
-                    <a href="https://twitter.com/motormata"><i class="fa fa-twitter"></i></a></span> <span class="has-text-success icon">
-                    <a href="https://instagram.com/motormata"><i class="fa fa-instagram"></i></a></span> <span class="has-text-success icon">
-                    <a href="#"><i class="fa fa-medium"></i></a></span> <span class="has-text-success icon">
-                    <a href="https://api.whatsapp.com/send?phone=2349082552590"><i class="fa fa-whatsapp"></i></a></span>
-                </div>
-
-                <div class="column is-4">
-                    <a href="#"><img class="footer-logo-image" src="https://paystack.com/assets/website/images/brand/badges/white.png"></a>
-
-                    <p></p>
+                <div class="columns is-centered">
+                    <div class="column is-8 is-narrow">
+                        <div class="columns feature-list-box" style="margin-bottom:5%;">
+                            <div class="column is-4 feature-list has-text-centered feat">
+                                <img class="animated jello" src="images/easy.svg" style="margin-bottom:10px; width:100px; height:auto;" />
+                                <h2>Vehicle Papers</h2>
+                                <p>Drive with Confidence when you subscribe to our vehicle papers management system. Dial *384*13# to get started.</p>
+                            </div>
+                            <div class="column is-4 feature-list has-text-centered feat">
+                                <img class="animated jello" src="images/speed.svg" style="margin-bottom:10px; width:100px; height:auto;" />
+                                <h2>Motor Doctor</h2>
+                                <p>Get instant technical assistance to diagnose your vehicle issues from our certified technicians. Subscribe to our weekly newsletters on preventive maintenance (100% guarantee to save your money).</p>
+                            </div>
+                            <div class="column is-4 feature-list has-text-centered feat"> <img class="animated jello" src="images/safe.svg" style="margin-bottom:10px; width:100px; height:auto;" />
+                                <h2>Spare Parts</h2>
+                                <p>We are the plug to original tokunbo and brand spare parts such as shock absorber, brake-pad, tyre, battery and many more.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="columns top-20">
-                <div class="column auto content has-text-centered">
-                    <p>&copy;2018 Iwemoto.com, All rights Resrved</p>
+        </section>
+        <section id="mDoctor" style="background-color:#fff;">
+            <div class="container side-50" style="padding:50px 30px 60px 30px;">
+                <div class="columns">
+                    <div class="foo column is-6 has-text-centered" style="margin-top:5%; margin-bottom:5%;">
+                        <img src="images/side2.jpg" style="margin:30px auto 10px auto; width:70%; height:auto;" />
+                    </div>
+                                    <div class="column is-6" style="margin-top:1%; margin-bottom:5%; padding:10px;">
+                        <h2 style="width:90%; font-size:2em; font-weight:500; line-height:100%; margin-top:50px;margin-bottom:20px;"> Motor Doctor <i class="fa fa-user-md"></i></h2>
+                        <div style="width:90%;">With phone lines open 24/7, we’re available to recover broken down vehicles from the point of occurrence  at any time of the day. <br><br> <b>Security:</b> Our vast interconnectivity of recovery network allows us fast access to deploy the nearest recovery services to you within the shortest possible time. This reduces the probability of being a victim of social vice at odd hours of the day.<br><br><b>Convenience:</b> Enjoy FREE pick-up, drop-off and on-site services.<br><br><b>No Camouflaged Fees:</b>  All fees are transparent and affordable.
+    
+    
+                        </div>
+                    </div>
+    
+                </div>
+        </section>
+        <section id="myModal" style="background-color:#fafafa;">
+            <div>
+                <div class="container" style="padding-left:30px; padding-right:30px; opacity: 1;">
+                    <div class="columns is-centered">
+                        <div class="column is-8 is-narrow has-text-centered" style="margin-top:5%; margin-bottom:1%;">
+                            <h2 class="animated flipInX" style="font-size:2em; font-weight:500; line-height:100%;">Our Services</h2>
+                        </div>
+                    </div>
+                    <div class="columns is-centered">
+                        <div class="column is-12 is-narrow">
+                            <div class="columns feature-list-box" style="margin-bottom:5%;">
+                                <div v-on:click="openModal('Routine Servicing', 'Oil Specification e.g. 5w30')" class="column is-2 feature-list has-text-centered hover">
+                                    <img class="animated jello" src="images/servicing.png" style="margin-bottom:10px; width:100px; height:auto;" />
+                                    <h2>Routine Servicing</h2>
+                                </div>
+                                <div v-on:click="openModal('AC Repair & Services', 'Tell us about the issue')" class="column is-2 feature-list has-text-centered hover">
+                                    <img class="animated jello" src="images/ac.png" style="margin-bottom:10px; width:100px; height:auto;" />
+                                    <h2>AC Repair & Services</h2>
+                                </div>
+                                <div v-on:click="openModal('Tyre & Wheels', 'Tyre Specification e.g. 225/65R17')" class="column is-2 feature-list has-text-centered hover"> <img class="animated jello" src="images/tyre.png" style="margin-bottom:10px; width:100px; height:auto;" />
+                                    <h2>Tyre & Wheels</h2>
+                                </div>
+                                <div @click="openModal('Brake System', 'Tell us about the issue')" class="column is-2 feature-list has-text-centered hover"> <img class="animated jello" src="images/brakes.png" style="margin-bottom:10px; width:100px; height:auto;" />
+                                    <h2>Brake System</h2>
+                                </div>                        
+                                <div @click="openModal('Suspension','Tell us about the issue')" class="column is-2 feature-list has-text-centered hover"> <img class="animated jello" src="images/suspensions.png" style="margin-bottom:10px; width:100px; height:auto;" />
+                                    <h2>Suspension</h2>
+                                </div>                        
+                                <div @click="openModal('Battery', 'Battery Specification e.g. 75AH 12v')" class="column is-2 feature-list has-text-centered hover"> <img class="animated jello" src="images/battery.png" style="margin-bottom:10px; width:100px; height:auto;" />
+                                    <h2>Battery</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            <!-- The Modal -->
+                <div id="theModal" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <div class="modalform">
+                            <h3 class="is-info">{{display}}</h3>
+                            <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzgE8EutZKU69CAVA6w1RajR7Av_49wDHMU4mLhNTRpkx7xBas0UJSW/exec">
+
+                            <div class="field">
+                                <p class="control has-icons-left has-icons-right">
+                                  <input name="Vehicle Details" class="input" type="text" placeholder="Vehicle details (Year, Make, Model)" />
+                                  <span class="icon is-small is-left">
+                                    <i class="fa fa-car"></i>
+                                  </span>
+                                  <span class="icon is-small is-right">
+                                    <i class="fa fa-check"></i>
+                                  </span>
+                                </p>
+                              </div>
+                              <div class="field">
+                                <p class="control has-icons-left">
+                                  <input
+                                    name="phone"
+                                    class="input"
+                                    type="number"
+                                    placeholder="Phone number"
+                                  />
+                                  <span class="icon is-small is-left">
+                                    <i class="fa fa-mobile"></i>
+                                  </span>
+                                </p>
+                              </div>
+
+                              <div class="field">
+                                <p class="control has-icons-left">
+                                  <input
+                                    name="details"
+                                    class="input"
+                                    type="text"
+                                    :placeholder="placeholder"
+                                  />
+                                  <span class="icon is-small is-left">
+                                    <i class="fa fa-comment"></i>
+                                  </span>
+                                </p>
+                              </div>
+            
+                            <div class="control">
+                                <button id="modalsubmit" class="button is-info">Submit</button>
+                            </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <button id="modalclose" class="modal-close is-large" v-on:click="closeModal" aria-label="close"></button>
                 </div>
             </div>
-        </div>
-    </footer>
+
+        </section>
+
+
+    
+        <section style="background-color:#f7f7f7;">
+            <div class="container side-50">
+                <div class="columns is-centered">
+                    <div class="column is-10 is-narrow has-text-centered" style="padding:60px 30px 60px 30px;">
+                        <h2 style="color:#666; font-size:1.6em; margin-bottom:30px;" class="is-info">Act now, chat with Motordoctor. <i class="fa fa-whatsapp"></i></h2>
+                        <a href="index.html" class="button is-info is-large">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section style="background-color:#fff;">
+            <div class="container side-50" style="padding:50px 30px 60px 30px;">
+                <div class="columns">
+                    <div class="column is-6" style="margin-top:5%; margin-bottom:1%; padding:10px;">
+                        <h2 style="width:90%; font-size:2em; font-weight:500; line-height:100%; margin-top:50px;margin-bottom:20px;">Genuine Tokunbo and New aftermarket spare parts</h2>
+                        <div style="width:90%;">Tell us about your spare parts need today. Get discounts and enjoy FREE delivery on selected items. <br><br>
+    
+    
+    
+    <a href="index.html" class="button is-info is-large">Order Now</a>
+    
+                        </div>
+                    </div>
+                    <div class="foo column is-6 has-text-centered" style="margin-top:5%; margin-bottom:1%;">
+                        <img src="images/car-parts2.png" style="margin:30px auto 10px auto; width:90%; height:auto;" />
+                    </div>
+                                    
+    
+                </div>
+        </section>
+    
+
+    
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-4">
+                        <a href="index.html"><img class="footer-logo-image" src="images/logo-gray.png"></a>
+                        <p>Motormata is a complete vehicle solution that is dedicated to buiding a one stop access point to all vehicle needs in Nigeria with the use of technology.</p>
+                    </div>
+                    <div class="column is-2 footer-menu">
+                        <h2 class="footer-menu-title">Company</h2>
+                        <ul>
+    
+                            <li><a href="about.html">Company</a></li>
+                            <li><a href="terms.html">Terms </a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="column is-3 footer-menu">
+                        <h2 class="footer-menu-title">Follow Us</h2>
+                        <span class="has-text-success icon">
+                        <a href="https://www.facebook.com/motormata"><i class="fa fa-facebook"></i></a></span> <span class="has-text-success icon">
+                        <a href="https://twitter.com/motormata"><i class="fa fa-twitter"></i></a></span> <span class="has-text-success icon">
+                        <a href="https://instagram.com/motormata"><i class="fa fa-instagram"></i></a></span> <span class="has-text-success icon">
+                        <a href="#"><i class="fa fa-medium"></i></a></span> <span class="has-text-success icon">
+                        <a href="https://api.whatsapp.com/send?phone=2349082552590"><i class="fa fa-whatsapp"></i></a></span>
+                    </div>
+    
+                    <div class="column is-3">
+                        <!-- <a href="#"
+                          ><img
+                            class="footer-logo-image"
+                            src="https://paystack.com/assets/website/images/brand/badges/white.png"
+                        /></a> -->
+            
+                        <p>
+                          Efficiently grow interdependent collaboration and idea-sharing via
+                          cost effective strategic theme areas. Continually visualize
+                          market-driven metrics without top-line technology. Energistically
+                          iterate top-line strategic theme areas whereas superior
+                          e-commerce. Monotonectally.
+                        </p>
+                      </div>
+                </div>
+                <div class="columns top-20">
+                    <div class="column auto content has-text-centered">
+                        <p>&copy;2021 Iwemoto.com, All rights Resrved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="js/scrollreveal.min.js"></script>
     <script>
@@ -316,11 +425,38 @@
         });
     </script>
 
+    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+    
+
+     <!-- VUE SCRIPT -->
+    <script>
+        const vueApp = new Vue({
+          el: '#myModal',
+          data: { 
+           display: '',
+           placeholder: ''
+          },
+          methods: {
+            openModal: function (payload, placeholder) {
+                const modal = document.getElementById("theModal");
+                modal.style.display = "block";
+                this.display = payload;
+                this.placeholder = placeholder;
+            },
+            closeModal: function() {
+              const modal = document.getElementById("theModal");
+              modal.style.display = "none";
+            }
+          }
+        })
+    </script>
+
 
 
 
     <script type="text/javascript">
         $(document).ready(function() {
+
             var html_l = ' <a href="images/001.jpg"></a><a href="images/002.jpg"></a><a href="images/003.jpg"></a><a href="images/004.jpg"></a>';
 
 

@@ -119,6 +119,10 @@ textarea {
   margin-top: 1%;
 }
 
+.hover {
+  cursor: pointer;
+}
+
 .feature-list {
   padding: 30px;
   color: #666;
@@ -189,6 +193,14 @@ textarea {
     url("https://www.spicyauto.com/blog/wp-content/uploads/2019/06/01-5-1024x683.jpg");
   background-position: 200px 0;
   background-repeat: repeat-x;
+  background-size: cover;
+}
+
+#promotion {
+  background: linear-gradient(rgba(115, 29, 5, 0.6), rgba(6, 125, 48, 0.8)),
+    url("https://www.fetchyourpetneeds.ie/wp-content/uploads/2019/08/Special-Offer.jpg");
+  background-position: 160px 0;
+  /* background-repeat: round; */
   background-size: cover;
 }
 
