@@ -48,3 +48,26 @@ html {
 .nav-item img {
   max-height: 2.75rem;
 }
+
+#header.hero-head {
+  background-image: linear-gradient(
+    rgba(115, 29, 5, 0.6),
+    rgba(6, 125, 48, 0.8)
+  );
+  color: #fff;
+}
+
+.hero-head .nav-item a:not(.button),
+.hero-head a.nav-item:not(.button) {
+  color: #fff;
+}
+
+.page-title-bar {
+  color: #fff;
+  padding: 40px;
+  font-size: 2em;
+  text-align: center;
+}
+.nav {
+  background-color: transparent;
+}

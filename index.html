@@ -287,12 +287,9 @@
       <section id="mDoctor" style="background-color: #fff">
         <div class="container side-50" style="padding: 50px 30px 60px 30px">
           <div class="columns">
-            <div
-              class="foo column is-6 has-text-centered"
-              style="margin-top: 5%; margin-bottom: 5%"
-            >
+            <div class="foo column is-6 has-text-centered">
               <img
-                src="images/side2.jpg"
+                src="images/doctor.png"
                 style="margin: 30px auto 10px auto; width: 70%; height: auto"
               />
             </div>
@@ -313,16 +310,14 @@
                 Motor Doctor <i class="fa fa-user-md"></i>
               </h2>
               <div style="width: 90%">
-                With phone lines open 24/7, we’re available to recover broken
-                down vehicles from the point of occurrence at any time of the
-                day. <br /><br />
-                <b>Security:</b> Our vast interconnectivity of recovery network
-                allows us fast access to deploy the nearest recovery services to
-                you within the shortest possible time. This reduces the
-                probability of being a victim of social vice at odd hours of the
-                day.<br /><br /><b>Convenience:</b> Enjoy FREE pick-up, drop-off
-                and on-site services.<br /><br /><b>No Camouflaged Fees:</b> All
-                fees are transparent and affordable.
+                MotorDoctor is your first point of contact for the diagnosis and
+                troubleshooting of vehicle issues.<br /><br />
+
+                <b>Services:</b> In addition to vehicle diagnosis and
+                troubleshooting, MotorDoctor is also excellent at Routine
+                Servicing, AC Repair & Services, Tyre & Wheels, Brake System,
+                Suspension and Battery replacement. <br /><br />
+                See menu below to choose your preferred service.
               </div>
             </div>
           </div>
@@ -345,7 +340,9 @@
             >
               Act now, chat with Motordoctor. <i class="fa fa-whatsapp"></i>
             </h2>
-            <a href="https://api.whatsapp.com/send?phone=2349082552590" class="button is-success is-large"
+            <a
+              href="https://api.whatsapp.com/send?phone=2349082552590"
+              class="button is-success is-large"
               >Get Started</a
             >
           </div>
@@ -579,39 +576,41 @@
               action="https://script.google.com/macros/s/AKfycbzgE8EutZKU69CAVA6w1RajR7Av_49wDHMU4mLhNTRpkx7xBas0UJSW/exec"
             >
               <div class="field">
+                <div class="field">
+                  <p class="control has-icons-left">
+                    <input
+                      name="parts"
+                      class="input"
+                      type="text"
+                      placeholder="Spare Parts separated with ','"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-gear"></i>
+                    </span>
+                  </p>
+                </div>
 
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input
-                    name="parts"
-                    class="input"
-                    type="text"
-                    placeholder="Spare Parts separated with ','"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-gear"></i>
-                  </span>
-                </p>
+                <div class="control">
+                  <button id="modalsubmit" class="button is-success">
+                    Submit
+                  </button>
+                </div>
               </div>
-
-              <div class="control">
-                <button id="modalsubmit" class="button is-success">
-                  Submit
-                </button>
-              </div>
+              <button
+                id="modalclose"
+                class="modal-close is-large"
+                v-on:click="closeModal"
+                aria-label="close"
+              ></button>
+              <!-- The Modal-->
+              <!-- Tokunbo -->
             </form>
           </div>
         </div>
-        <button
-          id="modalclose"
-          class="modal-close is-large"
-          v-on:click="closeModal"
-          aria-label="close"
-        ></button>
       </div>
-      <!-- The Modal-->
     </section>
-    <!-- Tokunbo -->
+
+    <!--THe MOdal-->
 
     <!-- Footer -->
     <footer class="footer">
@@ -622,9 +621,8 @@
               ><img class="footer-logo-image" src="images/logo-gray.png"
             /></a>
             <p>
-              Motormata is a complete vehicle solution that is dedicated to
-              buiding a one stop access point to all vehicle needs in Nigeria
-              with the use of technology.
+              Motormata is an automobile technology company that is building
+              solutions to better connect motorists to their vehicles.
             </p>
           </div>
           <div class="column is-2 footer-menu">
@@ -661,18 +659,18 @@
 
           <div class="column is-3">
             <!-- <a href="#"
-                      ><img
-                        class="footer-logo-image"
-                        src="https://paystack.com/assets/website/images/brand/badges/white.png"
-                    /></a> -->
+                            ><img
+                              class="footer-logo-image"
+                              src="https://paystack.com/assets/website/images/brand/badges/white.png"
+                          /></a> -->
 
             <!-- <p>
-                      Efficiently grow interdependent collaboration and idea-sharing via
-                      cost effective strategic theme areas. Continually visualize
-                      market-driven metrics without top-line technology. Energistically
-                      iterate top-line strategic theme areas whereas superior
-                      e-commerce. Monotonectally.
-                    </p> -->
+                            Efficiently grow interdependent collaboration and idea-sharing via
+                            cost effective strategic theme areas. Continually visualize
+                            market-driven metrics without top-line technology. Energistically
+                            iterate top-line strategic theme areas whereas superior
+                            e-commerce. Monotonectally.
+                          </p> -->
           </div>
         </div>
         <div class="columns top-20">
@@ -683,6 +681,8 @@
       </div>
     </footer>
     <!-- Footer -->
+
+    <script src="js/scrollreveal.min.js"></script>
 
     <script>
       window.sr = ScrollReveal();
@@ -770,9 +770,8 @@
               modal.style.display = "none";
             }
           },
-        }
+        },
       });
-
     </script>
     <!-- VUE SCRIPT -->
 

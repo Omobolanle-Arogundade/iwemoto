@@ -348,11 +348,6 @@ ol {
 }
 
 .page-title-bar {
-  background-color: rgb(5, 111, 115);
-  background-image: linear-gradient(
-    rgba(115, 29, 5, 0.4),
-    rgba(6, 125, 48, 0.8)
-  );
   color: #fff;
   padding: 40px;
   font-size: 2em;
