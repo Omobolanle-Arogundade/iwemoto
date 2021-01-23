@@ -26,3 +26,25 @@
 html {
   scroll-behavior: smooth;
 }
+
+.modal-content,
+.modal-card {
+  margin: 30% 20px;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px), print {
+  .modal-content,
+  .modal-card {
+    margin: 10% auto;
+    max-height: calc(100vh - 40px);
+    width: 640px;
+  }
+}
+
+.nav-item img {
+  max-height: 2.75rem;
+}
